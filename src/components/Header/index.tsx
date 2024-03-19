@@ -1,12 +1,14 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
+import { BsCupHot } from "react-icons/bs";
 
 export default function Header() {
   return (
     <main className={`flex w-screen flex-col`}>
-      <div className="bg-yellow-500 p-3 "></div>
+      <div className="bg-yellow-400 p-2.5 "></div>
       <div className={`flex w-screen items-center justify-around py-6`}>
-        <div>
+        <div className={`flex gap-5 items-center`}>
+          <BsCupHot size={26} />
           <h1 className="font-semibold text-2xl text-gray-700">
             Recipes Boruto
           </h1>

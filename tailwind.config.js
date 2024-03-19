@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        bgImg: "url('/src/assets/bgFeaturedSection.jpg')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
+    },
   },
   plugins: [],
 };

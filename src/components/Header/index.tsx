@@ -1,6 +1,7 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { BsCupHot } from "react-icons/bs";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -14,9 +15,15 @@ export default function Header() {
           </h1>
         </div>
         <div className="flex items-center justify-center gap-12">
-          <h2 className="font-bold text-2xl text-gray-700">Home</h2>
-          <h2 className="font-bold text-2xl text-gray-700">Recipes</h2>
-          <h2 className="font-bold text-2xl text-gray-700">About</h2>
+          <Link href="/">
+            <h2 className="font-bold text-2xl text-gray-700">Home</h2>
+          </Link>
+          <Link href="/pages/recipes">
+            <h2 className="font-bold text-2xl text-gray-700">Recipes</h2>
+          </Link>
+          <Link href="/pages/myRecipes">
+            <h2 className="font-bold text-2xl text-gray-700">My Recipes</h2>
+          </Link>
         </div>
         <div className="flex items-center">
           <div className="absolute px-2">

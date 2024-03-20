@@ -5,7 +5,7 @@ import React from "react";
 
 export default function InitialPage() {
   return (
-    <main>
+    <main className={`w-full overflow-hidden`}>
       <Header />
       <FeaturedSection />
       <MostPopular />

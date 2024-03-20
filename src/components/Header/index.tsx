@@ -4,9 +4,9 @@ import { BsCupHot } from "react-icons/bs";
 
 export default function Header() {
   return (
-    <main className={`flex w-screen flex-col`}>
-      <div className="bg-yellow-400 p-2.5 "></div>
-      <div className={`flex w-screen items-center justify-around py-6`}>
+    <main className={`flex w-screen flex-col  mb-4 overflow-hidden`}>
+      <div className="bg-yellow-400 p-2.5 w-screen "></div>
+      <div className={`flex w-screen items-center mt-4 justify-around py-6`}>
         <div className={`flex gap-5 items-center`}>
           <BsCupHot size={26} />
           <h1 className="font-semibold text-2xl text-gray-700">

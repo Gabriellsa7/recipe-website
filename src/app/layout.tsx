@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 // These styles apply to every route in the application
 import "./globals.css";
-
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -21,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./favicon.ico" />
+      </head>
       <body className={roboto.className}>{children}</body>
     </html>
   );

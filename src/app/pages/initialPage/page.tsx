@@ -1,5 +1,6 @@
 import FeaturedSection from "@/components/FeaturedSection";
 import Header from "@/components/Header";
+import MostPopular from "@/components/MostPopular";
 import React from "react";
 
 export default function InitialPage() {
@@ -7,9 +8,7 @@ export default function InitialPage() {
     <main>
       <Header />
       <FeaturedSection />
-      <div>
-        <h1>Initial Page</h1>
-      </div>
+      <MostPopular />
     </main>
   );
 }

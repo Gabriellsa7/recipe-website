@@ -1,6 +1,7 @@
 import FeaturedSection from "@/components/FeaturedSection";
 import Header from "@/components/Header";
 import MostPopular from "@/components/MostPopular";
+import RecentRecipes from "@/components/RecentRecipes";
 import React from "react";
 
 export default function InitialPage() {
@@ -9,6 +10,7 @@ export default function InitialPage() {
       <Header />
       <FeaturedSection />
       <MostPopular />
+      <RecentRecipes />
     </main>
   );
 }

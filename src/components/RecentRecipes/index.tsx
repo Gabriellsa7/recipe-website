@@ -1,28 +1,28 @@
 import React from "react";
 import { Bottom, Container, Top } from "../Card";
+import types from "./mocks";
 import Image from "next/image";
-import recipes from "./mocks";
 
-export default function MostPopular() {
+export default function RecentRecipes() {
   return (
-    <main className="my-12 flex flex-col gap-14">
-      <h1 className="text-center font-bold text-slate-900 text-4xl">
-        Most Popular Recipes
+    <main className="w-screen my-12">
+      <h1 className="text-center font-bold text-slate-900 text-4xl mb-9">
+        Recent Recipes
       </h1>
-      <div className="flex justify-center items-center gap-10">
-        {recipes.map(({ img, name, description, id }) => (
+      <div className="flex flex-col justify-center items-center gap-12">
+        {types.map(({ name, img, description, id }) => (
           <Container
             key={id}
-            className="max-w-[300px] max-h-[420px] bg-slate-200 rounded-2xl flex flex-col duration-500 hover:scale-110 cursor-pointer"
+            className=" bg-slate-200 rounded-2xl flex duration-500 hover:scale-110 cursor-pointer gap-5 min-w-[1000px] min-h-[300px] max-w-[1000px] max-h-[300px]"
           >
             <Top>
               <Image
-                className="w-[300px] h-[190px] rounded-t-2xl"
+                className="min-w-[400px] min-h-[300px] rounded-s-2xl object-cover"
                 src={img}
-                alt="image of recipe"
+                alt="Donut Image"
               />
             </Top>
-            <Bottom className="flex flex-col gap-5 items-start mx-6 my-4 pb-4">
+            <Bottom className="flex flex-col gap-5 items-start mx-6 my-4 pb-4 justify-around">
               <h1 className="text-2xl font-bold text-slate-800">{name}</h1>
               <p className="font-medium text-lg text-slate-900">
                 {description}

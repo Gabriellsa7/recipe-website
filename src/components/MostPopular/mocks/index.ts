@@ -4,19 +4,19 @@ import hotChocolate from "../../../assets/CardImgs/mostPopularImgs/HotChocolate.
 
 const recipes = [
   {
-    id: "1",
+    id: 1,
     name: "Waffles",
     description: "Cool recipe to eat with friends in the morning",
     img: waffles,
   },
   {
-    id: "2",
+    id: 2,
     name: "Pancakes",
     description: "Cool recipe to eat with friends in the morning",
     img: pancakles,
   },
   {
-    id: "3",
+    id: 3,
     name: "Hot Chocolate",
     description: "Cool recipe to eat with friends in the morning",
     img: hotChocolate,

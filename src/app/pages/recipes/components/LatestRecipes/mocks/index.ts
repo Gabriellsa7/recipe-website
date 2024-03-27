@@ -51,21 +51,21 @@ const allRecipes = [
     id: 7,
     name: "Caprese Salad",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Simple and refreshing Italian salad made with fresh tomatoes, mozzarella cheese, basil leaves, olive oil, balsamic vinegar, salt, and pepper. A classic combination of flavors.",
     img: capreseSalad,
   },
   {
     id: 8,
     name: "Chicken Tikka Masala",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "A popular Indian dish featuring grilled marinated chicken cooked in a rich, creamy tomato-based sauce with spices like garam masala, turmeric, and cumin. Served with rice or naan bread.",
     img: chickenTikkaMasala,
   },
   {
     id: 9,
     name: "Lemon Garlic Roast",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Juicy and flavorful whole roast chicken seasoned with garlic, lemon zest, herbs like thyme and rosemary, and olive oil. Roasted until golden brown and served with roasted vegetables.",
     img: lemonGarlicRoastChicken,
   },
 ];

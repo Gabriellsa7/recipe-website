@@ -53,35 +53,35 @@ const allRecipes = [
     id: 7,
     name: "Mushroom Risotto",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Creamy Italian rice dish cooked with Arborio rice, mushrooms (such as porcini or cremini), onions, garlic, white wine, and Parmesan cheese. A comforting and indulgent dish.",
     img: mushroomRisotto,
   },
   {
     id: 8,
     name: "Shrimp Pad Thai",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Popular Thai street food dish made with stir-fried rice noodles, shrimp, tofu, bean sprouts, scrambled eggs, and a tangy sauce made from tamarind paste, fish sauce, lime juice, and palm sugar. Garnished with peanuts and cilantro.",
     img: shrimpPadThai,
   },
   {
     id: 9,
     name: "Spaghetti Carbonara",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Classic Italian pasta dish made with spaghetti, eggs, pancetta or bacon, Parmesan cheese, and black pepper. Creamy and flavorful, it's a comfort food favorite.",
     img: spaghettiCarbonara,
   },
   {
     id: 10,
     name: "Thai Green Curry",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Fragrant and spicy Thai curry made with green curry paste, coconut milk, chicken or tofu, and a variety of vegetables like bell peppers, bamboo shoots, and Thai eggplant. Served with jasmine rice.",
     img: thaiGreenCurry,
   },
   {
     id: 11,
     name: "Vegetable Stir Fry",
     description:
-      "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
+      "Quick and nutritious dish made with an assortment of fresh vegetables such as bell peppers, broccoli, carrots, and snap peas, stir-fried with garlic, ginger, and soy sauce. Served over rice or noodles.",
     img: vegetableStirFry,
   },
 ];

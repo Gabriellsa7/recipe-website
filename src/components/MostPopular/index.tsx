@@ -1,10 +1,38 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bottom, Container, Top } from "../Card";
 import Image from "next/image";
 import recipes from "./mocks";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function MostPopular() {
+  const router = useRouter();
+  const { id } = router.query;
+  const [recipe, setRecipe] = useState(null);
+
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      try {
+        const response = await fetch(`/pages/recipePageInformation/${id}`); // Supondo que você tenha uma rota na sua API para buscar os detalhes da receita pelo ID
+        if (!response.ok) {
+          throw new Error("Erro ao buscar receita");
+        }
+        const data = await response.json();
+        setRecipe(data); // Define os detalhes da receita no estado
+      } catch (error) {
+        console.error("Erro ao buscar receita:", error);
+      }
+    };
+
+    if (id) {
+      fetchRecipe();
+    }
+  }, [id]);
+
+  if (!recipe) {
+    return <div>Carregando...</div>;
+  }
   return (
     <main className="my-12 flex flex-col gap-14">
       <h1 className="text-center font-bold text-slate-900 text-4xl">
@@ -12,7 +40,7 @@ export default function MostPopular() {
       </h1>
       <div className="flex justify-center items-center gap-10">
         {recipes.map(({ img, name, description, id }) => (
-          <div key={id}>
+          <Link key={id} href={`/pages/recipePageInformation/${id}`}>
             <Container
               key={id}
               className="max-w-[300px] max-h-[420px] bg-slate-200 rounded-2xl flex flex-col duration-500 hover:scale-110 cursor-pointer"
@@ -34,7 +62,7 @@ export default function MostPopular() {
                 </button>
               </Bottom>
             </Container>
-          </div>
+          </Link>
         ))}
       </div>
     </main>

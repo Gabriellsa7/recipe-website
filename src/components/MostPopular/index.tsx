@@ -1,38 +1,38 @@
 "use client";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { Bottom, Container, Top } from "../Card";
 import Image from "next/image";
 import recipes from "./mocks";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default function MostPopular() {
-  const router = useRouter();
-  const { id } = router.query;
-  const [recipe, setRecipe] = useState(null);
+  // const router = useRouter();
+  // const { id } = router.query;
+  // const [recipe, setRecipe] = useState(null);
 
-  useEffect(() => {
-    const fetchRecipe = async () => {
-      try {
-        const response = await fetch(`/pages/recipePageInformation/${id}`); // Supondo que você tenha uma rota na sua API para buscar os detalhes da receita pelo ID
-        if (!response.ok) {
-          throw new Error("Erro ao buscar receita");
-        }
-        const data = await response.json();
-        setRecipe(data); // Define os detalhes da receita no estado
-      } catch (error) {
-        console.error("Erro ao buscar receita:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchRecipe = async () => {
+  //     try {
+  //       const response = await fetch(`/pages/recipePageInformation/${id}`); // Supondo que você tenha uma rota na sua API para buscar os detalhes da receita pelo ID
+  //       if (!response.ok) {
+  //         throw new Error("Erro ao buscar receita");
+  //       }
+  //       const data = await response.json();
+  //       setRecipe(data); // Define os detalhes da receita no estado
+  //     } catch (error) {
+  //       console.error("Erro ao buscar receita:", error);
+  //     }
+  //   };
 
-    if (id) {
-      fetchRecipe();
-    }
-  }, [id]);
+  //   if (id) {
+  //     fetchRecipe();
+  //   }
+  // }, [id]);
 
-  if (!recipe) {
-    return <div>Carregando...</div>;
-  }
+  // if (!recipe) {
+  //   return <div>Carregando...</div>;
+  // }
   return (
     <main className="my-12 flex flex-col gap-14">
       <h1 className="text-center font-bold text-slate-900 text-4xl">

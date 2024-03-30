@@ -7,6 +7,7 @@ import recipes from "./mocks";
 import Link from "next/link";
 
 export default function MostPopular() {
+  //move to pages to use next router
   // const router = useRouter();
   // const { id } = router.query;
   // const [recipe, setRecipe] = useState(null);

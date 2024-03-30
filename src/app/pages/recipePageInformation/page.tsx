@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
 import Ingredients from "./components/Ingredients";
 import PreparationMode from "./components/PreparationMode";
-import AdditionalInformation from "./components/AdditionalInformation";
 import recipes from "../initialPage/components/MostPopular/mocks";
+import Instructions from "./components/Instructions";
 interface RecipePageProps {
   name: string;
   description: string;
@@ -60,7 +60,7 @@ export default function InformationRecipe() {
       <div>
         <Ingredients />
         <PreparationMode />
-        <AdditionalInformation />
+        <Instructions />
       </div>
     </main>
   );

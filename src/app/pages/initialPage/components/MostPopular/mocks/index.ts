@@ -9,7 +9,7 @@ interface RecipeProps {
   name: string;
   description: string;
   img: StaticImageData;
-  ingredients?: string;
+  ingredients?: [string];
 }
 
 const recipes: RecipeProps[] = [
@@ -18,7 +18,7 @@ const recipes: RecipeProps[] = [
     name: "Waffles",
     description: "Cool recipe to eat with friends in the morning",
     img: waffles,
-    ingredients: "",
+    ingredients: ["2 ¼ cups all-purpose flour", "1 tablespoon baking powder"],
   },
   {
     id: 2,

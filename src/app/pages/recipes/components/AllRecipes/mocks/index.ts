@@ -1,5 +1,5 @@
 import waffles from "@/assets/CardImgs/mostPopularImgs/Waffles.jpeg";
-import pancakles from "@/assets/CardImgs/mostPopularImgs/Pancakles.jpeg";
+import pancakes from "@/assets/CardImgs/mostPopularImgs/Pancakes.jpeg";
 import hotChocolate from "@/assets/CardImgs/mostPopularImgs/HotChocolate.jpeg";
 import donut from "@/assets/CardImgs/recentRecipes/Donut.jpeg";
 import cereal from "@/assets/CardImgs/recentRecipes/Cereal.jpeg";
@@ -21,7 +21,7 @@ const allRecipes = [
     id: 2,
     name: "Pancakes",
     description: "Cool recipe to eat with friends in the morning",
-    img: pancakles,
+    img: pancakes,
   },
   {
     id: 3,

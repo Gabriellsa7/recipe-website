@@ -1,5 +1,5 @@
 import waffles from "../../../../../../assets/CardImgs/mostPopularImgs/Waffles.jpeg";
-import pancakles from "../../../../../../assets/CardImgs/mostPopularImgs/Pancakles.jpeg";
+import pancakes from "../../../../../../assets/CardImgs/mostPopularImgs/Pancakes.jpeg";
 import hotChocolate from "../../../../../../assets/CardImgs/mostPopularImgs/HotChocolate.jpeg";
 
 import { StaticImageData } from "next/image";
@@ -35,7 +35,17 @@ const recipes: RecipeProps[] = [
     id: 2,
     name: "Pancakes",
     description: "Cool recipe to eat with friends in the morning",
-    img: pancakles,
+    img: pancakes,
+    ingredients: [
+      "110 grams of plain flour (sifted)",
+      "A pinch of salt",
+      "2 eggs",
+      "200 milliliters of milk (mixed with 75ml/3fl oz water)",
+      "50 grams of butter",
+      "Caster sugar (to taste)",
+      "Lemon juice (for drizzling)",
+      "Lemon wedges (optional)",
+    ],
   },
   {
     id: 3,

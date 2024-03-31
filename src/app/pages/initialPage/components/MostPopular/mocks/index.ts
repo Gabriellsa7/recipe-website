@@ -9,16 +9,27 @@ interface RecipeProps {
   name: string;
   description: string;
   img: StaticImageData;
-  ingredients?: [string];
+  ingredients?: [...any];
 }
 
+//trying to put the ingredients recipes in an array of string
 const recipes: RecipeProps[] = [
   {
     id: 1,
     name: "Waffles",
     description: "Cool recipe to eat with friends in the morning",
     img: waffles,
-    ingredients: ["2 ¼ cups all-purpose flour", "1 tablespoon baking powder"],
+    ingredients: [
+      "2 ¼ cups all-purpose flour",
+      "\n1 tablespoon baking powder",
+      "\n3 tablespoons sugar",
+      "\n½ teaspoon salt",
+      "\n1 teaspoon cinnamon",
+      "\n2 large eggs (separated)",
+      "\n½ cup vegetable oil",
+      "\n2 cups milk",
+      "\n1 teaspoon vanilla extract",
+    ],
   },
   {
     id: 2,

@@ -15,21 +15,21 @@ export default function InformationRecipe() {
   const [recipe, setRecipe] = useState<RecipePageProps | null>(null);
 
   useEffect(() => {
-    // Função para buscar os dados da receita
+    // Function to search recipe data
     const fetchRecipeData = async () => {
-      // Simulação de uma chamada de API assíncrona
+      // Simulating an asynchronous API call
       try {
-        // Obtenha os parâmetros da URL
+        // Get the URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get("name") || "";
         const description = urlParams.get("description") || "";
         const img = urlParams.get("img") || "";
 
-        // Encontre a receita com base no nome na lista de receitas
+        // Find the recipe based on the name in the recipe list
         const recipeData = recipes.find((recipe) => recipe.name === name);
 
         if (recipeData) {
-          // Defina os dados da receita no estado
+          // Define revenue data in the state
           setRecipe({ name, description, img });
         } else {
           console.error("Recipe not found");
@@ -39,7 +39,7 @@ export default function InformationRecipe() {
       }
     };
 
-    // Chame a função de busca de dados quando o componente montar
+    // Call the data fetch function when the component mounts
     fetchRecipeData();
   }, []);
 

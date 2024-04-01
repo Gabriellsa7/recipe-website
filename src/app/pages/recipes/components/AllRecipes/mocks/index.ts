@@ -9,8 +9,17 @@ import shrimpPadThai from "@/assets/CardImgs/allImages/Shrimp_Pad_Thai.jpeg";
 import spaghettiCarbonara from "@/assets/CardImgs/allImages/SpaghettiCarbonara.jpeg";
 import thaiGreenCurry from "@/assets/CardImgs/allImages/ThaiGreenCurry.jpeg";
 import vegetableStirFry from "@/assets/CardImgs/allImages/VegetableStir_Fry.jpeg";
+import { StaticImageData } from "next/image";
 
-const allRecipes = [
+interface RecipeProps {
+  id: number;
+  name: string;
+  description: string;
+  img: StaticImageData;
+  ingredients?: [...any];
+}
+
+const allRecipes: RecipeProps[] = [
   {
     id: 1,
     name: "Waffles",

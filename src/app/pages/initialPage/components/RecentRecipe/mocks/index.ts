@@ -6,7 +6,7 @@ import {
   cerealIngredients,
   cookiesIngredients,
   donutIngredients,
-} from "@/app/pages/recipePageInformation/mocks";
+} from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
 
 export interface RecipeProps {
   id: number;

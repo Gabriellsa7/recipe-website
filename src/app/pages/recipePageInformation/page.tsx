@@ -7,6 +7,7 @@ import recipes from "../initialPage/components/MostPopular/mocks";
 import Instructions from "./components/Instructions";
 import recentRecipes from "../initialPage/components/RecentRecipe/mocks";
 import { StaticImageData } from "next/image";
+import allRecipes from "../recipes/components/AllRecipes/mocks";
 interface RecipePageProps {
   name: string;
   description: string;
@@ -25,10 +26,12 @@ export default function InformationRecipe() {
         const name = urlParams.get("name") || "";
 
         // Combine recipes and recentRecipes into one array
-        const allRecipes = recipes.concat(recentRecipes);
+        const generalRecipes = recipes.concat(recentRecipes).concat(allRecipes);
 
         // Find the recipe based on the name in the combined list
-        const recipeData = allRecipes.find((recipe) => recipe.name === name);
+        const recipeData = generalRecipes.find(
+          (recipe) => recipe.name === name
+        );
 
         if (recipeData) {
           // Define recipe data in the state

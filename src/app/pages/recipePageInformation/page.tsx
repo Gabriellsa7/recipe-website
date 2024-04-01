@@ -5,10 +5,12 @@ import Ingredients from "./components/Ingredients";
 import PreparationMode from "./components/PreparationMode";
 import recipes from "../initialPage/components/MostPopular/mocks";
 import Instructions from "./components/Instructions";
+import recentRecipes from "../initialPage/components/RecentRecipe/mocks";
+import { StaticImageData } from "next/image";
 interface RecipePageProps {
   name: string;
   description: string;
-  img: string;
+  img: string | StaticImageData;
 }
 
 export default function InformationRecipe() {
@@ -17,20 +19,20 @@ export default function InformationRecipe() {
   useEffect(() => {
     // Function to search recipe data
     const fetchRecipeData = async () => {
-      // Simulating an asynchronous API call
       try {
         // Get the URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get("name") || "";
-        const description = urlParams.get("description") || "";
-        const img = urlParams.get("img") || "";
 
-        // Find the recipe based on the name in the recipe list
-        const recipeData = recipes.find((recipe) => recipe.name === name);
+        // Combine recipes and recentRecipes into one array
+        const allRecipes = recipes.concat(recentRecipes);
+
+        // Find the recipe based on the name in the combined list
+        const recipeData = allRecipes.find((recipe) => recipe.name === name);
 
         if (recipeData) {
-          // Define revenue data in the state
-          setRecipe({ name, description, img });
+          // Define recipe data in the state
+          setRecipe(recipeData);
         } else {
           console.error("Recipe not found");
         }
@@ -44,7 +46,7 @@ export default function InformationRecipe() {
   }, []);
 
   if (!recipe?.name) {
-    return <div>Loading...</div>;
+    return <main>Loading...</main>;
   }
   return (
     <main>

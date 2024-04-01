@@ -1,9 +1,7 @@
-"use client";
 import recipes, {
   RecipeProps,
 } from "@/app/pages/initialPage/components/MostPopular/mocks";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/router";
+import recentRecipes from "@/app/pages/initialPage/components/RecentRecipe/mocks";
 import React, { useEffect, useState } from "react";
 
 interface RecipePageProps {
@@ -17,8 +15,11 @@ export default function Ingredients() {
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get("name") || "";
 
-    // Find the recipe based on the name in the recipe list
-    const foundRecipe = recipes.find((recipe) => recipe.name === name);
+    // Combine recipes and recentRecipes into one array
+    const allRecipes = recipes.concat(recentRecipes);
+
+    // Find the recipe based on the name in the combined list
+    const foundRecipe = allRecipes.find((recipe) => recipe.name === name);
 
     if (foundRecipe) {
       setRecipe(foundRecipe);
@@ -28,7 +29,7 @@ export default function Ingredients() {
   }, []);
 
   if (!recipe?.name) {
-    return <div>Loading...</div>;
+    return <main>Loading...</main>;
   }
 
   return (

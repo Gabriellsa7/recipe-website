@@ -1,15 +1,8 @@
 import React from "react";
 import { Bottom, Container, Top } from "@/components/Card";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import recipes from "./mocks";
 import Link from "next/link";
-
-interface RecipeProps {
-  img: string | StaticImageData;
-  id: string;
-  name: string;
-  description: string;
-}
 
 export default function MostPopular() {
   return (

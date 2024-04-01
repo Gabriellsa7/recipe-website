@@ -1,8 +1,9 @@
 import FeaturedSection from "@/components/FeaturedSection";
 import Header from "@/components/Header";
 import MostPopular from "./components/MostPopular";
-import RecentRecipes from "@/components/RecentRecipes";
+
 import React from "react";
+import RecentRecipes from "./components/RecentRecipe";
 
 export default function InitialPage() {
   return (

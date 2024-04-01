@@ -13,8 +13,6 @@ const wafflesIngredients = {
   ],
 };
 const pancakesIngredients = {
-  id: 2,
-  name: "Pancakes",
   ingredients: [
     "110 grams of plain flour (sifted)",
     "A pinch of salt",
@@ -26,5 +24,14 @@ const pancakesIngredients = {
     "Lemon wedges (optional)",
   ],
 };
+const hotChocolateIngredients = {
+  ingredients: [
+    "4 cups Milk (preferably whole or 2%)",
+    "¼ cup Unsweetened Cocoa Powder",
+    "¼ cup Granulated Sugar",
+    "½ cup Semisweet Chocolate Chips (or bittersweet, or chopped chocolate bar)",
+    "¼ teaspoon Pure Vanilla Extract,",
+  ],
+};
 
-export { pancakesIngredients, wafflesIngredients };
+export { pancakesIngredients, wafflesIngredients, hotChocolateIngredients };

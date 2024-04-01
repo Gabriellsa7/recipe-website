@@ -4,6 +4,7 @@ import hotChocolate from "../../../../../../assets/CardImgs/mostPopularImgs/HotC
 
 import { StaticImageData } from "next/image";
 import {
+  hotChocolateIngredients,
   pancakesIngredients,
   wafflesIngredients,
 } from "@/app/pages/recipePageInformation/mocks";
@@ -37,6 +38,7 @@ const recipes: RecipeProps[] = [
     name: "Hot Chocolate",
     description: "Cool recipe to eat with friends in the morning",
     img: hotChocolate,
+    ingredients: hotChocolateIngredients.ingredients,
   },
 ];
 

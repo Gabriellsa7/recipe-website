@@ -41,14 +41,6 @@ export default function Ingredients() {
               <li key={index}>{ingredient}</li>
             ))}
         </ul>
-        {/* {recipes.map((recipe) => (
-          <ul key={recipe.id}>
-            {recipe.ingredients &&
-              recipe.ingredients.map((ingredient, i) => (
-                <li key={i}>{"\n" + ingredient}</li>
-              ))}
-          </ul>
-        ))} */}
       </div>
     </div>
   );

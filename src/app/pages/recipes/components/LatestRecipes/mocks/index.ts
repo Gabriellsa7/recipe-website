@@ -8,7 +8,7 @@ import capreseSalad from "@/assets/CardImgs/allImages/CapreseSalad.jpeg";
 import chickenTikkaMasala from "@/assets/CardImgs/allImages/ChickenTikkaMasala.jpeg";
 import lemonGarlicRoastChicken from "@/assets/CardImgs/allImages/Lemon_Garlic_Roast_Chicken.jpeg";
 
-const allRecipes = [
+const latestRecipes = [
   {
     id: 1,
     name: "Waffles",
@@ -70,4 +70,4 @@ const allRecipes = [
   },
 ];
 
-export default allRecipes;
+export default latestRecipes;

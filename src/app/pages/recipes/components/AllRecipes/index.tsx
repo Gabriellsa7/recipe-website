@@ -15,10 +15,6 @@ export default function AllRecipes() {
           {allRecipes.map((allRecipes) => (
             <Link
               key={allRecipes.id}
-              // href={{
-              //   pathname: "/pages/recipePageInformation",
-              //   query: { img: img.toString(), id, name, description },
-              // }}
               href={`/pages/recipePageInformation?name=${allRecipes.name}&description=${allRecipes.description}&img=${allRecipes.img}`}
             >
               <div key={allRecipes.id}>

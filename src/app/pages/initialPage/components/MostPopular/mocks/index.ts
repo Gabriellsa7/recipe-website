@@ -8,6 +8,11 @@ import {
   pancakesIngredients,
   wafflesIngredients,
 } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
+import {
+  hotChocolateInstructions,
+  pancakesInstructions,
+  wafflesInstructions,
+} from "@/app/pages/recipePageInformation/components/Instructions/mocks";
 
 export interface RecipeProps {
   id: number;
@@ -15,6 +20,7 @@ export interface RecipeProps {
   description: string;
   img: StaticImageData;
   ingredients?: [...any];
+  instructions?: [...any];
 }
 
 //trying to put the ingredients recipes in an array of string
@@ -25,6 +31,7 @@ const recipes: RecipeProps[] = [
     description: "Cool recipe to eat with friends in the morning",
     img: waffles,
     ingredients: wafflesIngredients.ingredients,
+    instructions: wafflesInstructions.instructions,
   },
   {
     id: 2,
@@ -32,6 +39,7 @@ const recipes: RecipeProps[] = [
     description: "Cool recipe to eat with friends in the morning",
     img: pancakes,
     ingredients: pancakesIngredients.ingredients,
+    instructions: pancakesInstructions.instructions,
   },
   {
     id: 3,
@@ -39,6 +47,7 @@ const recipes: RecipeProps[] = [
     description: "Cool recipe to eat with friends in the morning",
     img: hotChocolate,
     ingredients: hotChocolateIngredients.ingredients,
+    instructions: hotChocolateInstructions.instructions,
   },
 ];
 

@@ -1,33 +1,44 @@
-import React from "react";
+import recipes, {
+  RecipeProps,
+} from "@/app/pages/initialPage/components/MostPopular/mocks";
+import recentRecipes from "@/app/pages/initialPage/components/RecentRecipe/mocks";
+import allRecipes from "@/app/pages/recipes/components/AllRecipes/mocks";
+import latestRecipes from "@/app/pages/recipes/components/LatestRecipes/mocks";
+import React, { useEffect, useState } from "react";
 
 export default function Instructions() {
+  const [recipe, setRecipe] = useState<RecipeProps | null>(null);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name") || "";
+
+    const generalRecipes = recipes
+      .concat(recentRecipes)
+      .concat(allRecipes)
+      .concat(latestRecipes);
+
+    const foundRecipe = generalRecipes.find((recipe) => recipe.name === name);
+
+    if (foundRecipe) {
+      setRecipe(foundRecipe);
+    } else {
+      console.error("Recipe not found");
+    }
+  }, []);
+
+  if (!recipe?.name) {
+    return <main>Loading...</main>;
+  }
   return (
     <div>
       <h1>Instructions</h1>
       <div>
         <ul>
-          <li>
-            In a mixing bowl, combine the flour, baking powder, salt, and sugar.
-          </li>
-          <li>
-            Separate the egg yolks and whites. Beat the egg yolks and add them
-            to the dry ingredients along with the milk, melted butter, and
-            vanilla extract. Mix until smooth.
-          </li>
-          <li>
-            In a separate bowl, beat the egg whites until stiff peaks form.
-            Gently
-          </li>
-          <li>
-            fold the beaten egg whites into the batter. Preheat your waffle iron
-          </li>
-          <li>
-            and lightly grease it. Pour the batter onto the hot waffle iron and
-          </li>
-          <li>
-            cook until golden and crispy. Top with your favorite toppings like
-          </li>
-          <li>blueberry sauce, nuts, or whipped cream.</li>
+          {recipe.instructions &&
+            recipe.instructions.map((instruction, i) => (
+              <li key={i}>{instruction}</li>
+            ))}
         </ul>
       </div>
     </div>

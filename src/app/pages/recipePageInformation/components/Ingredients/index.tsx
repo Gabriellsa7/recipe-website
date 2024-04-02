@@ -3,6 +3,7 @@ import recipes, {
 } from "@/app/pages/initialPage/components/MostPopular/mocks";
 import recentRecipes from "@/app/pages/initialPage/components/RecentRecipe/mocks";
 import allRecipes from "@/app/pages/recipes/components/AllRecipes/mocks";
+import latestRecipes from "@/app/pages/recipes/components/LatestRecipes/mocks";
 import React, { useEffect, useState } from "react";
 
 interface RecipePageProps {
@@ -17,7 +18,10 @@ export default function Ingredients() {
     const name = urlParams.get("name") || "";
 
     // Combine recipes and recentRecipes into one array
-    const generalRecipes = recipes.concat(recentRecipes).concat(allRecipes);
+    const generalRecipes = recipes
+      .concat(recentRecipes)
+      .concat(allRecipes)
+      .concat(latestRecipes);
 
     // Find the recipe based on the name in the combined list
     const foundRecipe = generalRecipes.find((recipe) => recipe.name === name);
@@ -39,8 +43,8 @@ export default function Ingredients() {
       <div>
         <ul>
           {recipe.ingredients &&
-            recipe.ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
+            recipe.ingredients.map((ingredient, i) => (
+              <li key={i}>{ingredient}</li>
             ))}
         </ul>
       </div>

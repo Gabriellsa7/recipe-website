@@ -31,60 +31,48 @@ const pancakesInstructions = {
 };
 const hotChocolateInstructions = {
   instructions: [
-    "4 cups Milk (preferably whole or 2%)",
-    "¼ cup Unsweetened Cocoa Powder",
-    "¼ cup Granulated Sugar",
-    "½ cup Semisweet Chocolate Chips (or bittersweet, or chopped chocolate bar)",
-    "¼ teaspoon Pure Vanilla Extract,",
+    "Heat the milk in a saucepan over medium heat for 3 to 4 minutes.",
+    "Add the brown sugar and stir until dissolved.",
+    "Stir in the dark chocolate until it’s completely melted (about 2 to 3 minutes).",
+    "Remove the saucepan from the heat and stir in the cream and cinnamon.",
+    "Top with whipped cream, marshmallows, crushed peppermint, or any other topping of your choice.",
   ],
 };
 
 const donutInstructions = {
   instructions: [
-    "1 cup Whole Milk (warmed to about 110°F or 43°C)",
-    "2 teaspoons Active Dry Yeast (or instant, equivalent to 1 standard packet)",
-    "⅓ cup Granulated Sugar (divided)",
-    "2 large Eggs",
-    "6 tablespoons Unsalted Butter (melted and slightly cooled)",
-    "1 ½ teaspoons Pure Vanilla Extract",
-    "¼ teaspoon Ground Nutmeg",
-    "½ teaspoon Salt",
-    "4 cups All-Purpose Flour (spooned & leveled, plus more as needed)",
-    "2 quarts Vegetable Oil (for frying)",
-    "2 cups Confectioners’ Sugar (sifted)",
-    "⅓ cup Heavy Cream (half-and-half, or whole milk)",
+    "Heat the oil in a deep frying pan.",
+    "In a mixing bowl, combine flour, clarified butter, egg, milk, salt, baking powder, baking soda, powdered sugar, cinnamon powder, nutmeg powder, and vanilla essence.",
+    "Mix well to form a smooth dough.",
+    "Roll out the dough on a floured surface to a thickness of about 1/3 inch.",
+    "Cut out donuts using a donut cutter.",
+    "Fry the donuts in hot oil until golden brown and puffed.",
+    "Drain excess oil on paper towels.",
+    "Melt the dark chocolate chunks and dip the donuts into the melted chocolate.",
+    "Decorate with colorful candies or sprinklers.",
+    "Serve and enjoy your homemade donuts! 🍩",
   ],
 };
 
 const cerealInstructions = {
   instructions: [
-    "1 cup cornflakes, lightly crushed",
-    "1 cup crispy rice cereal",
-    "1 cup rolled oats",
-    "4 cups all-purpose flour",
-    "1 tablespoon baking soda",
-    "1 cup unsalted butter, softened",
-    "1 cup canola oil",
-    "1 cup white sugar",
-    "1 cup brown sugar",
-    "1 large egg",
-    "2 teaspoons vanilla extract",
+    "Heat the milk in a saucepan.",
+    "Add the cinnamon stick and oats, and cook until creamy.",
+    "Stir in the coconut oil, chopped pears, honey, brown sugar, raisins, and almonds.",
+    "Serve warm and enjoy this wholesome oatmeal cereal! 🥣 ",
   ],
 };
 
 const cookiesInstructions = {
   instructions: [
-    "1 cup granola",
-    "1 cup all-purpose flour",
-    "½ teaspoon baking soda",
-    "Pinch of salt",
-    "1 large egg",
-    "2 tablespoons milk",
-    "1 teaspoon vanilla extract",
-    "½ teaspoon ground cinnamon",
-    "½ cup chocolate chips",
-    "½ cup dried cranberries",
-    "½ cup chopped nuts (e.g., almonds, walnuts)",
+    "Preheat your oven to 375°F (190°C).",
+    "In a large bowl, beat together the granulated sugar, brown sugar, margarine (or butter), vanilla extract, and egg until creamy.",
+    "Dissolve the baking soda in 1 teaspoon of hot water and add it to the mixture.",
+    "Stir in the flour, chocolate chips, and nuts (if using).",
+    "Drop spoonfuls of dough onto a prepared baking sheet.",
+    "Bake for 10 to 12 minutes or until the edges are golden brown.",
+    "Let them cool slightly on the baking sheet before transferring to a wire rack.",
+    "Enjoy these nutty chocolate chip cookies! 🍪 ",
   ],
 };
 

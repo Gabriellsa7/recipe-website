@@ -7,6 +7,11 @@ import {
   cookiesIngredients,
   donutIngredients,
 } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
+import {
+  cerealInstructions,
+  cookiesInstructions,
+  donutInstructions,
+} from "@/app/pages/recipePageInformation/components/Instructions/mocks";
 
 export interface RecipeProps {
   id: number;
@@ -14,6 +19,7 @@ export interface RecipeProps {
   description: string;
   img: StaticImageData;
   ingredients?: [...any];
+  instructions?: [...any];
 }
 
 const recentRecipes: RecipeProps[] = [
@@ -23,6 +29,7 @@ const recentRecipes: RecipeProps[] = [
     description: "Irresistible donuts with soft dough and delicious topping",
     img: donut,
     ingredients: donutIngredients.ingredients,
+    instructions: donutInstructions.instructions,
   },
   {
     id: 2,
@@ -31,6 +38,7 @@ const recentRecipes: RecipeProps[] = [
       "Irresistible crunchy cereal, perfect for breakfast. A delicious and nutritious option to start the day with energy with soft dough and delicious topping",
     img: cereal,
     ingredients: cerealIngredients.ingredients,
+    instructions: cerealInstructions.instructions,
   },
   {
     id: 3,
@@ -39,6 +47,7 @@ const recentRecipes: RecipeProps[] = [
       "Irresistible homemade cookies with soft dough and delicious chocolate pieces",
     img: cookies,
     ingredients: cookiesIngredients.ingredients,
+    instructions: cookiesInstructions.instructions,
   },
 ];
 

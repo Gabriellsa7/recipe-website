@@ -1,5 +1,4 @@
 import React from "react";
-import allRecipes from "./mocks";
 import { Bottom, Container, Top } from "@/components/Card";
 import Image from "next/image";
 import latestRecipes from "./mocks";

@@ -1,3 +1,5 @@
+import Ingredients from "..";
+
 //trying to put the ingredients recipes in an array of string
 const wafflesIngredients = {
   ingredients: [
@@ -83,6 +85,19 @@ const cookiesIngredients = {
   ],
 };
 
+const mushroomRisottoIngredients = {
+  ingredients: [
+    "3 shallots, chopped",
+    "1 garlic clove, chopped",
+    "350g/12oz Arborio rice",
+    "175ml/6fl oz white wine",
+    "600ml/1 pint 1½fl oz hot vegetable stock",
+    "150g/5oz mushrooms, chopped",
+    "30g/1oz freshly grated Parmesan (or similar vegetarian hard cheese)",
+    "Salt and freshly ground black pepper",
+  ],
+};
+
 export {
   pancakesIngredients,
   wafflesIngredients,
@@ -90,4 +105,5 @@ export {
   donutIngredients,
   cerealIngredients,
   cookiesIngredients,
+  mushroomRisottoIngredients,
 };

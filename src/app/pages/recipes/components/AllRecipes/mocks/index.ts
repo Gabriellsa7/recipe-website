@@ -10,6 +10,7 @@ import spaghettiCarbonara from "@/assets/CardImgs/allImages/SpaghettiCarbonara.j
 import thaiGreenCurry from "@/assets/CardImgs/allImages/ThaiGreenCurry.jpeg";
 import vegetableStirFry from "@/assets/CardImgs/allImages/VegetableStir_Fry.jpeg";
 import { StaticImageData } from "next/image";
+import { mushroomRisottoIngredients } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
 
 interface RecipeProps {
   id: number;
@@ -17,6 +18,7 @@ interface RecipeProps {
   description: string;
   img: StaticImageData;
   ingredients?: [...any];
+  instructions?: [...any];
 }
 
 const allRecipes: RecipeProps[] = [
@@ -64,6 +66,8 @@ const allRecipes: RecipeProps[] = [
     description:
       "Creamy Italian rice dish cooked with Arborio rice, mushrooms (such as porcini or cremini), onions, garlic, white wine, and Parmesan cheese. A comforting and indulgent dish.",
     img: mushroomRisotto,
+    ingredients: mushroomRisottoIngredients.ingredients,
+    instructions: [],
   },
   {
     id: 8,

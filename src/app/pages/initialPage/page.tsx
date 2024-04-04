@@ -4,7 +4,7 @@ import MostPopular from "./components/MostPopular";
 
 import React from "react";
 import RecentRecipes from "./components/RecentRecipe";
-import Footer from "./components/Footer";
+import Footer from "@/components/Footer";
 
 export default function InitialPage() {
   return (

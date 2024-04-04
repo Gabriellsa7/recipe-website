@@ -10,7 +10,13 @@ import spaghettiCarbonara from "@/assets/CardImgs/allImages/SpaghettiCarbonara.j
 import thaiGreenCurry from "@/assets/CardImgs/allImages/ThaiGreenCurry.jpeg";
 import vegetableStirFry from "@/assets/CardImgs/allImages/VegetableStir_Fry.jpeg";
 import { StaticImageData } from "next/image";
-import { mushroomRisottoIngredients } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
+import {
+  mushroomRisottoIngredients,
+  shrimpPadThaiIngredients,
+  spaghettiCarbonaraIngredients,
+  thaiGreenCurryIngredients,
+  vegetableStirFryIngredients,
+} from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
 
 interface RecipeProps {
   id: number;
@@ -75,6 +81,7 @@ const allRecipes: RecipeProps[] = [
     description:
       "Popular Thai street food dish made with stir-fried rice noodles, shrimp, tofu, bean sprouts, scrambled eggs, and a tangy sauce made from tamarind paste, fish sauce, lime juice, and palm sugar. Garnished with peanuts and cilantro.",
     img: shrimpPadThai,
+    ingredients: shrimpPadThaiIngredients.Ingredients,
   },
   {
     id: 9,
@@ -82,6 +89,7 @@ const allRecipes: RecipeProps[] = [
     description:
       "Classic Italian pasta dish made with spaghetti, eggs, pancetta or bacon, Parmesan cheese, and black pepper. Creamy and flavorful, it's a comfort food favorite.",
     img: spaghettiCarbonara,
+    ingredients: spaghettiCarbonaraIngredients.Ingredients,
   },
   {
     id: 10,
@@ -89,6 +97,7 @@ const allRecipes: RecipeProps[] = [
     description:
       "Fragrant and spicy Thai curry made with green curry paste, coconut milk, chicken or tofu, and a variety of vegetables like bell peppers, bamboo shoots, and Thai eggplant. Served with jasmine rice.",
     img: thaiGreenCurry,
+    ingredients: thaiGreenCurryIngredients.Ingredients,
   },
   {
     id: 11,
@@ -96,6 +105,7 @@ const allRecipes: RecipeProps[] = [
     description:
       "Quick and nutritious dish made with an assortment of fresh vegetables such as bell peppers, broccoli, carrots, and snap peas, stir-fried with garlic, ginger, and soy sauce. Served over rice or noodles.",
     img: vegetableStirFry,
+    ingredients: vegetableStirFryIngredients.Ingredients,
   },
 ];
 

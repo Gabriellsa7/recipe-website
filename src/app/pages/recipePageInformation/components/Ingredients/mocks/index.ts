@@ -98,6 +98,52 @@ const mushroomRisottoIngredients = {
   ],
 };
 
+const shrimpPadThaiIngredients = {
+  Ingredients: [
+    "Pad Thai Noodles: 8 ounces (225g).",
+    "Whole Shrimp: 8 ounces (225g, with heads on if available).",
+    "Oil: 4 tablespoons (divided).",
+    "Water: 2/3 cup (160 ml).",
+    "Sugar: 3 tablespoons.",
+    "Tamarind Paste: 2 tablespoons.",
+    "Fish Sauce: 3 tablespoons.",
+    "White Pepper: To taste",
+  ],
+};
+
+const spaghettiCarbonaraIngredients = {
+  Ingredients: [
+    "100g pancetta",
+    "50g pecorino cheese",
+    "50g parmesan",
+    "3 large eggs",
+    "350g spaghetti",
+    "2 plump garlic cloves, peeled and left whole",
+    "50g unsalted butter",
+    "Sea salt and freshly ground black pepper",
+  ],
+};
+
+const thaiGreenCurryIngredients = {
+  Ingredients: [
+    "Chicken (or any protein of choice)",
+    "Eggplant",
+    "Snow peas",
+    "Green curry paste (store-bought or homemade)",
+    "Full-fat coconut milk",
+    "Fresh garlic, ginger, and lemongrass (if using jar paste)",
+    "Rice or noodles for serving",
+  ],
+};
+
+const vegetableStirFryIngredients = {
+  Ingredients: [
+    "Red bell pepper, yellow bell peppers, sugar snap peas, carrots, mushrooms, broccoli, baby corn, water chestnuts",
+    "Sauce: soy sauce, minced garlic, brown sugar, sesame oil, chicken broth, cornstarch",
+    "Garnish: green onions and sesame seeds",
+  ],
+};
+
 export {
   pancakesIngredients,
   wafflesIngredients,
@@ -106,4 +152,8 @@ export {
   cerealIngredients,
   cookiesIngredients,
   mushroomRisottoIngredients,
+  shrimpPadThaiIngredients,
+  spaghettiCarbonaraIngredients,
+  thaiGreenCurryIngredients,
+  vegetableStirFryIngredients,
 };

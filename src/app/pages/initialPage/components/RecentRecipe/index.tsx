@@ -15,10 +15,6 @@ export default function RecentRecipes() {
         {recentRecipes.map((recentRecipes) => (
           <Link
             key={recentRecipes.id}
-            // href={{
-            //   pathname: "/pages/recipePageInformation",
-            //   query: { img: img.toString(), id, name, description },
-            // }}
             href={`/pages/recipePageInformation?name=${recentRecipes.name}&description=${recentRecipes.description}&img=${recentRecipes.img}`}
           >
             <Container

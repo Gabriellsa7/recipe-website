@@ -76,6 +76,23 @@ const cookiesInstructions = {
   ],
 };
 
+const mushroomRisottoInstructions = {
+  instructions: [
+    "Heat a large skillet or saucepan over medium heat. Add a drizzle of olive oil.",
+    "Add the chopped onion and minced garlic. Sauté until the onion is translucent.",
+    "Add the sliced mushrooms and cook until they release their moisture and become tender. Season with salt and pepper. Remove from the pan and set aside.",
+    "In the same skillet, melt the butter over medium heat.",
+    "Add the Arborio rice and stir to coat it with the butter. Cook for about 1-2 minutes until the rice is lightly toasted.",
+    "Pour in the white wine and stir until it’s mostly absorbed by the rice.",
+    "Begin adding the warm broth, one ladleful at a time, stirring constantly.",
+    "Wait until each ladleful is mostly absorbed before adding the next. Continue this process until the rice is creamy and cooked (about 18-20 minutes).",
+    "Stir in the sautéed mushrooms and any juices they released.",
+    "Add the grated Parmesan cheese and season with additional salt and pepper if needed. Mix well.",
+    "Remove from heat and let it rest for a minute.",
+    "Garnish with chopped parsley and an extra sprinkle of Parmesan cheese.",
+  ],
+};
+
 export {
   pancakesInstructions,
   wafflesInstructions,
@@ -83,4 +100,5 @@ export {
   donutInstructions,
   cerealInstructions,
   cookiesInstructions,
+  mushroomRisottoInstructions,
 };

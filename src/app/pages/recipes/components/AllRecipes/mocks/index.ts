@@ -17,6 +17,7 @@ import {
   thaiGreenCurryIngredients,
   vegetableStirFryIngredients,
 } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
+import { mushroomRisottoInstructions } from "@/app/pages/recipePageInformation/components/Instructions/mocks";
 
 interface RecipeProps {
   id: number;
@@ -73,7 +74,7 @@ const allRecipes: RecipeProps[] = [
       "Creamy Italian rice dish cooked with Arborio rice, mushrooms (such as porcini or cremini), onions, garlic, white wine, and Parmesan cheese. A comforting and indulgent dish.",
     img: mushroomRisotto,
     ingredients: mushroomRisottoIngredients.ingredients,
-    instructions: [],
+    instructions: mushroomRisottoInstructions.instructions,
   },
   {
     id: 8,

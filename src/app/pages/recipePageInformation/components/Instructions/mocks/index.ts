@@ -95,52 +95,43 @@ const mushroomRisottoInstructions = {
 
 const shrimpPadThaiInstructions = {
   instructions: [
-    "Heat a large skillet or saucepan over medium heat. Add a drizzle of olive oil.",
-    "Add the chopped onion and minced garlic. Sauté until the onion is translucent.",
-    "Add the sliced mushrooms and cook until they release their moisture and become tender. Season with salt and pepper. Remove from the pan and set aside.",
-    "In the same skillet, melt the butter over medium heat.",
-    "Add the Arborio rice and stir to coat it with the butter. Cook for about 1-2 minutes until the rice is lightly toasted.",
-    "Pour in the white wine and stir until it’s mostly absorbed by the rice.",
-    "Begin adding the warm broth, one ladleful at a time, stirring constantly.",
-    "Wait until each ladleful is mostly absorbed before adding the next. Continue this process until the rice is creamy and cooked (about 18-20 minutes).",
-    "Stir in the sautéed mushrooms and any juices they released.",
-    "Add the grated Parmesan cheese and season with additional salt and pepper if needed. Mix well.",
-    "Remove from heat and let it rest for a minute.",
-    "Garnish with chopped parsley and an extra sprinkle of Parmesan cheese.",
+    "Soak the rice noodles in warm water until softened, then drain.",
+    "Heat oil in a wok over medium-high heat. Add garlic and shrimp, stir-fry until shrimp turns pink.",
+    "Push shrimp aside, add beaten eggs, scramble for a minute, then combine with shrimp.",
+    "Add soaked noodles and dried tiny baby shrimp. Mix well and heat through.",
+    "Top with bean sprouts, chopped peanuts, and lime wedges. Serve hot",
+  ],
+};
+
+const spaghettiCarbonaraInstructions = {
+  instructions: [
+    "Boil water for the pasta and cook the spaghetti according to package instructions.",
+    "Cut the guanciale into small pieces and cook it in a skillet until crispy. No need for oil; guanciale is already fatty and flavorful.",
+    "Prepare the pecorino cream by mixing eggs, pecorino Romano cheese, and freshly ground black pepper.",
+    "Combine the cooked spaghetti with the guanciale and then toss with the creamy egg and cheese sauce.",
+    "Serve immediately with extra Pecorino Romano and a sprinkle of black pepper ",
   ],
 };
 
 const thaiGreenCurryInstructions = {
   instructions: [
-    "Heat a large skillet or saucepan over medium heat. Add a drizzle of olive oil.",
-    "Add the chopped onion and minced garlic. Sauté until the onion is translucent.",
-    "Add the sliced mushrooms and cook until they release their moisture and become tender. Season with salt and pepper. Remove from the pan and set aside.",
-    "In the same skillet, melt the butter over medium heat.",
-    "Add the Arborio rice and stir to coat it with the butter. Cook for about 1-2 minutes until the rice is lightly toasted.",
-    "Pour in the white wine and stir until it’s mostly absorbed by the rice.",
-    "Begin adding the warm broth, one ladleful at a time, stirring constantly.",
-    "Wait until each ladleful is mostly absorbed before adding the next. Continue this process until the rice is creamy and cooked (about 18-20 minutes).",
-    "Stir in the sautéed mushrooms and any juices they released.",
-    "Add the grated Parmesan cheese and season with additional salt and pepper if needed. Mix well.",
-    "Remove from heat and let it rest for a minute.",
-    "Garnish with chopped parsley and an extra sprinkle of Parmesan cheese.",
+    "Heat the vegetable oil in a large skillet or wok over medium heat.",
+    "Add the green curry paste and cook for 1 minute to release its flavors.",
+    "Add the sliced chicken and cook until browned.",
+    "Pour in the coconut milk and stir well.",
+    "Add the red bell pepper, zucchini, and snow peas. Simmer until the vegetables are tender.",
+    "Season with fish sauce and brown sugar.",
+    "Serve hot, garnished with fresh basil leaves ",
   ],
 };
 
 const vegetableStirFryInstructions = {
   instructions: [
-    "Heat a large skillet or saucepan over medium heat. Add a drizzle of olive oil.",
-    "Add the chopped onion and minced garlic. Sauté until the onion is translucent.",
-    "Add the sliced mushrooms and cook until they release their moisture and become tender. Season with salt and pepper. Remove from the pan and set aside.",
-    "In the same skillet, melt the butter over medium heat.",
-    "Add the Arborio rice and stir to coat it with the butter. Cook for about 1-2 minutes until the rice is lightly toasted.",
-    "Pour in the white wine and stir until it’s mostly absorbed by the rice.",
-    "Begin adding the warm broth, one ladleful at a time, stirring constantly.",
-    "Wait until each ladleful is mostly absorbed before adding the next. Continue this process until the rice is creamy and cooked (about 18-20 minutes).",
-    "Stir in the sautéed mushrooms and any juices they released.",
-    "Add the grated Parmesan cheese and season with additional salt and pepper if needed. Mix well.",
-    "Remove from heat and let it rest for a minute.",
-    "Garnish with chopped parsley and an extra sprinkle of Parmesan cheese.",
+    "Soak the rice noodles in warm water until softened, then drain.",
+    "Heat oil in a wok or skillet over medium heat.",
+    "Add the chopped vegetables in the order mentioned below (based on cooking time).",
+    "Pour in the stir fry sauce (Charlie or homemade) and toss everything together.",
+    "Serve hot over rice or noodles, and enjoy! 🥢🌿",
   ],
 };
 
@@ -155,4 +146,5 @@ export {
   shrimpPadThaiInstructions,
   thaiGreenCurryInstructions,
   vegetableStirFryInstructions,
+  spaghettiCarbonaraInstructions,
 };

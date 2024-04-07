@@ -17,7 +17,13 @@ import {
   thaiGreenCurryIngredients,
   vegetableStirFryIngredients,
 } from "@/app/pages/recipePageInformation/components/Ingredients/mocks";
-import { mushroomRisottoInstructions } from "@/app/pages/recipePageInformation/components/Instructions/mocks";
+import {
+  mushroomRisottoInstructions,
+  shrimpPadThaiInstructions,
+  spaghettiCarbonaraInstructions,
+  thaiGreenCurryInstructions,
+  vegetableStirFryInstructions,
+} from "@/app/pages/recipePageInformation/components/Instructions/mocks";
 
 interface RecipeProps {
   id: number;
@@ -83,6 +89,7 @@ const allRecipes: RecipeProps[] = [
       "Popular Thai street food dish made with stir-fried rice noodles, shrimp, tofu, bean sprouts, scrambled eggs, and a tangy sauce made from tamarind paste, fish sauce, lime juice, and palm sugar. Garnished with peanuts and cilantro.",
     img: shrimpPadThai,
     ingredients: shrimpPadThaiIngredients.Ingredients,
+    instructions: shrimpPadThaiInstructions.instructions,
   },
   {
     id: 9,
@@ -91,6 +98,7 @@ const allRecipes: RecipeProps[] = [
       "Classic Italian pasta dish made with spaghetti, eggs, pancetta or bacon, Parmesan cheese, and black pepper. Creamy and flavorful, it's a comfort food favorite.",
     img: spaghettiCarbonara,
     ingredients: spaghettiCarbonaraIngredients.Ingredients,
+    instructions: spaghettiCarbonaraInstructions.instructions,
   },
   {
     id: 10,
@@ -99,6 +107,7 @@ const allRecipes: RecipeProps[] = [
       "Fragrant and spicy Thai curry made with green curry paste, coconut milk, chicken or tofu, and a variety of vegetables like bell peppers, bamboo shoots, and Thai eggplant. Served with jasmine rice.",
     img: thaiGreenCurry,
     ingredients: thaiGreenCurryIngredients.Ingredients,
+    instructions: thaiGreenCurryInstructions.instructions,
   },
   {
     id: 11,
@@ -107,6 +116,7 @@ const allRecipes: RecipeProps[] = [
       "Quick and nutritious dish made with an assortment of fresh vegetables such as bell peppers, broccoli, carrots, and snap peas, stir-fried with garlic, ginger, and soy sauce. Served over rice or noodles.",
     img: vegetableStirFry,
     ingredients: vegetableStirFryIngredients.Ingredients,
+    instructions: vegetableStirFryInstructions.instructions,
   },
 ];
 

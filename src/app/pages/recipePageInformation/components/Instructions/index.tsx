@@ -32,12 +32,14 @@ export default function Instructions() {
   }
   return (
     <div>
-      <h1>Instructions</h1>
-      <div>
-        <ul>
+      <h1 className="font-bold text-2xl">Instructions</h1>
+      <div className="mx-8">
+        <ul className="list-decimal font-medium">
           {recipe.instructions &&
             recipe.instructions.map((instruction, i) => (
-              <li key={i}>{instruction}</li>
+              <li key={i}>
+                <p className="text-lg">{instruction}</p>
+              </li>
             ))}
         </ul>
       </div>

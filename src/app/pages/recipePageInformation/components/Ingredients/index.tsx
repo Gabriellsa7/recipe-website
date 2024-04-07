@@ -39,12 +39,14 @@ export default function Ingredients() {
 
   return (
     <div>
-      <h1>Ingredients</h1>
-      <div>
-        <ul>
+      <h1 className="font-bold text-2xl">Ingredients</h1>
+      <div className="mx-8">
+        <ul className="list-disc">
           {recipe.ingredients &&
             recipe.ingredients.map((ingredient, i) => (
-              <li key={i}>{ingredient}</li>
+              <li key={i}>
+                <p className="text-lg font-medium">{ingredient}</p>
+              </li>
             ))}
         </ul>
       </div>

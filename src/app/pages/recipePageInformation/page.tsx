@@ -56,7 +56,7 @@ export default function InformationRecipe() {
     return <main>Loading...</main>;
   }
   return (
-    <main>
+    <main className="overflow-hidden">
       <Header />
       <div>
         <div className="bg-cover bg-center h-[263px] w-[100%] relative bg-[url('../assets/bgFeaturedSection.jpg')] bg-no-repeat">
@@ -66,7 +66,7 @@ export default function InformationRecipe() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mx-16 w-4/5">
         <Ingredients />
         <PreparationMode />
         <Instructions />

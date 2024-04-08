@@ -38,22 +38,20 @@ export default function Ingredients() {
   }
 
   return (
-    <div className="bg-fuchsia-200 rounded-xl">
-      <section className="p-5">
-        <h1 className="font-bold text-2xl">Ingredients</h1>
-        <div className="my-2">
-          <ul className="list-disc ml-8 flex flex-col gap-2">
-            {recipe.ingredients &&
-              recipe.ingredients.map((ingredient, i) => (
-                <li key={i}>
-                  <p className="text-lg font-medium max-w-[340px] break-words">
-                    {ingredient}
-                  </p>
-                </li>
-              ))}
-          </ul>
-        </div>
-      </section>
+    <div className="bg-slate-200 rounded-xl p-5 flex flex-col justify-start h-[90%]">
+      <h1 className="font-bold text-2xl">Ingredients</h1>
+      <div className="py-3 w-[95%]">
+        <ul className="list-disc ml-8 flex flex-col gap-2">
+          {recipe.ingredients &&
+            recipe.ingredients.map((ingredient, i) => (
+              <li key={i}>
+                <p className="text-lg font-medium max-w-[500px] break-words">
+                  {ingredient}
+                </p>
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 }

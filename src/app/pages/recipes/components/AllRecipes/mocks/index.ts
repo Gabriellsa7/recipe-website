@@ -25,13 +25,6 @@ import {
   vegetableStirFryInstructions,
 } from "@/app/pages/recipePageInformation/components/Instructions/mocks";
 import { RecipeProps } from "@/app/pages/initialPage/components/MostPopular/mocks";
-import {
-  mushroomRisottoPreparationMode,
-  shrimpPadThaiPreparationMode,
-  spaghettiCarbonaraPreparationMode,
-  thaiGreenCurryPreparationMode,
-  vegetableStirFryPreparationMode,
-} from "@/app/pages/recipePageInformation/components/PreparationMode/mocks";
 
 const allRecipes: RecipeProps[] = [
   {

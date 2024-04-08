@@ -2,7 +2,6 @@
 import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
 import Ingredients from "./components/Ingredients";
-import PreparationMode from "./components/PreparationMode";
 import recipes from "../initialPage/components/MostPopular/mocks";
 import Instructions from "./components/Instructions";
 import recentRecipes from "../initialPage/components/RecentRecipe/mocks";

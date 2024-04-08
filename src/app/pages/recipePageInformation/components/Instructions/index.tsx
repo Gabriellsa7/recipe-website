@@ -34,11 +34,13 @@ export default function Instructions() {
     <div>
       <h1 className="font-bold text-2xl">Instructions</h1>
       <div>
-        <ul className="list-decimal font-medium ml-8">
+        <ul className="list-decimal font-medium ml-8 my-2 flex flex-col gap-2">
           {recipe.instructions &&
             recipe.instructions.map((instruction, i) => (
               <li key={i}>
-                <p className="w-[1100px] break-words">{instruction}</p>
+                <p className="w-[1100px] break-words font-medium">
+                  {instruction}
+                </p>
               </li>
             ))}
         </ul>

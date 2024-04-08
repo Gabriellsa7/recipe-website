@@ -25,7 +25,6 @@ export interface RecipeProps {
   img: StaticImageData;
   ingredients?: [...any];
   instructions?: [...any];
-  preparationMode?: [...any];
 }
 
 const recentRecipes: RecipeProps[] = [
@@ -36,7 +35,6 @@ const recentRecipes: RecipeProps[] = [
     img: donut,
     ingredients: donutIngredients.ingredients,
     instructions: donutInstructions.instructions,
-    preparationMode: donutPreparationMode.preparationMode,
   },
   {
     id: 2,
@@ -46,7 +44,6 @@ const recentRecipes: RecipeProps[] = [
     img: cereal,
     ingredients: cerealIngredients.ingredients,
     instructions: cerealInstructions.instructions,
-    preparationMode: cerealPreparationMode.preparationMode,
   },
   {
     id: 3,
@@ -56,7 +53,6 @@ const recentRecipes: RecipeProps[] = [
     img: cookies,
     ingredients: cookiesIngredients.ingredients,
     instructions: cookiesInstructions.instructions,
-    preparationMode: cookiesPreparationMode.preparationMode,
   },
 ];
 

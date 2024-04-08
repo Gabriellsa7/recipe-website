@@ -80,7 +80,6 @@ const allRecipes: RecipeProps[] = [
     img: mushroomRisotto,
     ingredients: mushroomRisottoIngredients.ingredients,
     instructions: mushroomRisottoInstructions.instructions,
-    preparationMode: mushroomRisottoPreparationMode.preparationMode,
   },
   {
     id: 8,
@@ -90,7 +89,6 @@ const allRecipes: RecipeProps[] = [
     img: shrimpPadThai,
     ingredients: shrimpPadThaiIngredients.Ingredients,
     instructions: shrimpPadThaiInstructions.instructions,
-    preparationMode: shrimpPadThaiPreparationMode.preparationMode,
   },
   {
     id: 9,
@@ -100,7 +98,6 @@ const allRecipes: RecipeProps[] = [
     img: spaghettiCarbonara,
     ingredients: spaghettiCarbonaraIngredients.Ingredients,
     instructions: spaghettiCarbonaraInstructions.instructions,
-    preparationMode: spaghettiCarbonaraPreparationMode.preparationMode,
   },
   {
     id: 10,
@@ -110,7 +107,6 @@ const allRecipes: RecipeProps[] = [
     img: thaiGreenCurry,
     ingredients: thaiGreenCurryIngredients.Ingredients,
     instructions: thaiGreenCurryInstructions.instructions,
-    preparationMode: thaiGreenCurryPreparationMode.preparationMode,
   },
   {
     id: 11,
@@ -120,7 +116,6 @@ const allRecipes: RecipeProps[] = [
     img: vegetableStirFry,
     ingredients: vegetableStirFryIngredients.Ingredients,
     instructions: vegetableStirFryInstructions.instructions,
-    preparationMode: vegetableStirFryPreparationMode.preparationMode,
   },
 ];
 

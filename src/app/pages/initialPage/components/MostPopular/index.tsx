@@ -4,6 +4,7 @@ import Image from "next/image";
 import recipes from "./mocks";
 import Link from "next/link";
 import { FaBookmark } from "react-icons/fa";
+import Button from "@/components/Button";
 
 export default function MostPopular() {
   return (
@@ -43,14 +44,12 @@ export default function MostPopular() {
                   <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
                     See Recipe
                   </button>
-                  <Link href="/pages/recipes">
-                    <button>
-                      <FaBookmark
-                        className="text-[#3e404a] hover:text-slate-400 duration-500"
-                        size={25}
-                      />
-                    </button>
-                  </Link>
+                  <Button>
+                    <FaBookmark
+                      className="text-[#3e404a] hover:text-slate-400 duration-500"
+                      size={25}
+                    />
+                  </Button>
                 </div>
               </Bottom>
             </Container>

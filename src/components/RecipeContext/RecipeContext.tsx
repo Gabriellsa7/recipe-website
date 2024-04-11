@@ -1,3 +1,4 @@
+"use client";
 import { StaticImageData } from "next/image";
 import React, {
   createContext,

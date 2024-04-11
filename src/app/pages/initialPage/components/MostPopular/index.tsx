@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Bottom, Container, Top } from "@/components/Card";
 import Image from "next/image";
@@ -16,10 +17,6 @@ export default function MostPopular() {
         {recipes.map((recipes) => (
           <Link
             key={recipes.id}
-            // href={{
-            //   pathname: "/pages/recipePageInformation",
-            //   query: { img: img.toString(), id, name, description },
-            // }}
             href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
           >
             <Container

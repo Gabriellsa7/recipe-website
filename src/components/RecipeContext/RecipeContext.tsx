@@ -46,11 +46,24 @@ export const RecipeProvider = (props: any) => {
   }, [recipes]);
 
   const addRecipe = (newRecipe: Recipe) => {
-    setRecipes([...recipes, newRecipe]);
+    const isAlreadyAdded = recipes.some(
+      (existingRecipe) => existingRecipe.id === newRecipe.id
+    );
+    if (!isAlreadyAdded) {
+      setRecipes([...recipes, newRecipe]);
+      updateLocalStorage([...recipes, newRecipe]);
+    } else {
+      console.log("Recipe already added!");
+    }
+  };
+
+  const updateLocalStorage = (updatedRecipes: Recipe[]) => {
+    console.log("Updating localStorage with recipes:", updatedRecipes);
+    localStorage.setItem("recipes", JSON.stringify(updatedRecipes));
   };
 
   const removeRecipe = (id: number) => {
-    setRecipes(recipes.filter((recipe) => recipe.id !== id));
+    setRecipes(recipes.filter((recipe) => recipe && recipe.id !== id));
   };
 
   const value: RecipeContextData = {

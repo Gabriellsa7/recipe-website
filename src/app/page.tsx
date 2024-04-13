@@ -1,5 +1,11 @@
+"use client";
+import { RecipeProvider } from "@/components/RecipeContext/RecipeContext";
 import InitialPage from "./pages/initialPage/page";
 
 export default function Home() {
-  return <InitialPage />;
+  return (
+    <RecipeProvider>
+      <InitialPage />
+    </RecipeProvider>
+  );
 }

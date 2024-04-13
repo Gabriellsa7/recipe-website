@@ -1,3 +1,4 @@
+"use client";
 import { StaticImageData } from "next/image";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
@@ -14,7 +15,9 @@ interface RecipeContextData {
   removeRecipe: (id: number) => void;
 }
 
-const RecipeContext = createContext<RecipeContextData | undefined>(undefined);
+export const RecipeContext = createContext<RecipeContextData | undefined>(
+  undefined
+);
 
 export const useRecipe = () => {
   const context = useContext(RecipeContext);
@@ -28,12 +31,18 @@ export const RecipeProvider = (props: any) => {
   const { children } = props;
 
   const [recipes, setRecipes] = useState<Recipe[]>(() => {
-    const recipesLocalStorage = localStorage.getItem("recipes");
-    return recipesLocalStorage ? JSON.parse(recipesLocalStorage) : [];
+    if (typeof window !== "undefined") {
+      const recipesLocalStorage = localStorage.getItem("recipes");
+      return recipesLocalStorage ? JSON.parse(recipesLocalStorage) : [];
+    } else {
+      return [];
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem("recipes", JSON.stringify(recipes));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("recipes", JSON.stringify(recipes));
+    }
   }, [recipes]);
 
   const addRecipe = (newRecipe: Recipe) => {

@@ -28,21 +28,13 @@ function MyRecipesContent() {
     removeRecipe(recipeId);
   };
   return (
-    <main>
+    <main className="flex flex-col justify-between h-full overflow-x-hidden">
       <Header />
-      <section className="grid grid-cols-4 justify-center items-center gap-10 m-20">
+      <section className="grid grid-cols-4 justify-center items-center gap-10 m-20 mt-14 ">
         {recipes &&
           recipes.map(
             (recipe) =>
               recipe && (
-                // <Link
-                //   key={recipe ? recipe.id : null}
-                //   href={
-                //     recipe
-                //       ? `/pages/recipePageInformation?name=${recipe.name}&description=${recipe.description}&img=${recipe.img}`
-                //       : ""
-                //   }
-                // >
                 <Container
                   key={recipe && recipe.id}
                   className="max-w-[300px] max-h-[420px] bg-slate-200 rounded-2xl flex flex-col duration-500 hover:scale-110 cursor-pointer"
@@ -66,16 +58,27 @@ function MyRecipesContent() {
                       {recipe ? recipe.description : ""}
                     </p>
                     <div className="flex gap-20 w-full items-center">
-                      <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
-                        See Recipe
-                      </button>
+                      <Link
+                        key={recipe ? recipe.id : null}
+                        href={
+                          recipe
+                            ? `/pages/recipePageInformation?name=${recipe.name}&description=${recipe.description}&img=${recipe.img}`
+                            : ""
+                        }
+                      >
+                        <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
+                          See Recipe
+                        </button>
+                      </Link>
                       <button onClick={() => handleDeleteRecipe(recipe.id)}>
-                        <MdDeleteForever size={32} />
+                        <MdDeleteForever
+                          className="text-[#3e404a] hover:text-slate-400 duration-500"
+                          size={32}
+                        />
                       </button>
                     </div>
                   </Bottom>
                 </Container>
-                // </Link>
               )
           )}
       </section>

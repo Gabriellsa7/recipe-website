@@ -14,7 +14,8 @@ import {
 export default function MostPopular() {
   const { addRecipe } = useRecipe();
 
-  const handleAddFavorites = (recipe: any) => {
+  const handleAddFavorites = (e: any, recipe: any) => {
+    e.stopPropagation();
     addRecipe(recipe);
   };
 
@@ -25,10 +26,6 @@ export default function MostPopular() {
       </h1>
       <div className="flex justify-center items-center gap-10">
         {recipes.map((recipes) => (
-          // <Link
-          //   key={recipes.id}
-          //   href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
-          // >
           <Container
             key={recipes.id}
             className="max-w-[300px] max-h-[420px] bg-slate-200 rounded-2xl flex flex-col duration-500 hover:scale-110 cursor-pointer"
@@ -48,10 +45,15 @@ export default function MostPopular() {
                 {recipes.description}
               </p>
               <div className="flex gap-20 w-full items-center">
-                <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
-                  See Recipe
-                </button>
-                <button onClick={() => handleAddFavorites(recipes)}>
+                <Link
+                  key={recipes.id}
+                  href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
+                >
+                  <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
+                    See Recipe
+                  </button>
+                </Link>
+                <button onClick={(e) => handleAddFavorites(e, recipes)}>
                   <FaBookmark
                     className="text-[#3e404a] hover:text-slate-400 duration-500"
                     size={25}
@@ -60,7 +62,6 @@ export default function MostPopular() {
               </div>
             </Bottom>
           </Container>
-          //</Link>
         ))}
       </div>
     </main>

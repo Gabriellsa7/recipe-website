@@ -24,7 +24,7 @@ export default function MostPopular() {
       <h1 className="text-center font-bold text-slate-900 text-4xl">
         Most Popular Recipes
       </h1>
-      <div className="flex justify-center items-center gap-10">
+      <div className="flex justify-center items-center gap-10 min-[320px]:flex-col md:flex-col lg:flex-row xl:flex-row">
         {recipes.map((recipes) => (
           <Container
             key={recipes.id}

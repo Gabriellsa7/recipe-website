@@ -11,7 +11,7 @@ export default function RecentRecipes() {
       <h1 className="text-center font-bold text-slate-900 text-4xl mb-9">
         Recent Recipes
       </h1>
-      <div className="flex flex-col justify-center items-center gap-12">
+      <div className="flex flex-col justify-center items-center gap-12 ">
         {recentRecipes.map((recentRecipes) => (
           <Link
             key={recentRecipes.id}

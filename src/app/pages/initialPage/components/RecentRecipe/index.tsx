@@ -19,7 +19,7 @@ export default function RecentRecipes() {
           >
             <Container
               key={recentRecipes.id}
-              className=" bg-slate-200 rounded-2xl flex duration-500 hover:scale-110 cursor-pointer gap-5 min-w-[1000px] min-h-[300px] max-w-[1000px] max-h-[300px] flex-1"
+              className=" bg-slate-200 rounded-2xl flex duration-500 hover:scale-110 cursor-pointer gap-5 min-w-[1000px] min-h-[300px] max-w-[1000px] max-h-[300px]"
             >
               <Top className="max-h-[300px] max-w-[400px] overflow-hidden">
                 <Image

@@ -5,7 +5,9 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <main className={`flex w-screen flex-col  mb-4 overflow-hidden`}>
+    <main
+      className={`flex w-screen flex-col  mb-4 overflow-hidden min-[320px]:hidden min-[1024px]:flex`}
+    >
       <div className="bg-yellow-400 p-2.5 w-screen "></div>
       <div className={`flex w-screen items-center mt-4 justify-around py-6`}>
         <div className={`flex gap-5 items-center`}>

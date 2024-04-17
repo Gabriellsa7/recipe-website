@@ -5,9 +5,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <main
-      className={`flex w-screen flex-col  mb-4 overflow-hidden min-[320px]:hidden min-[1024px]:flex`}
-    >
+    <main className={`flex w-screen flex-col  mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen "></div>
       <div className={`flex w-screen items-center mt-4 justify-around py-6`}>
         <div className={`flex gap-5 items-center`}>
@@ -16,7 +14,7 @@ export default function Header() {
             Recipes Boruto
           </h1>
         </div>
-        <div className="flex items-center justify-center gap-12">
+        <div className="flex items-center justify-center gap-12 min-[320px]:hidden min-[1024px]:flex">
           <Link href="/">
             <h2 className="font-bold text-2xl text-gray-700">Home</h2>
           </Link>
@@ -27,7 +25,7 @@ export default function Header() {
             <h2 className="font-bold text-2xl text-gray-700">My Recipes</h2>
           </Link>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center min-[320px]:hidden min-[768px]:flex min-[1024px]:flex">
           <div className="absolute px-2">
             <CiSearch size="20px" color="gray" />
           </div>

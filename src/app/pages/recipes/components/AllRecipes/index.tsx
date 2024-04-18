@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function AllRecipes() {
   return (
+    //make the AllRecipes component responsive
     <main className="my-12 flex flex-col gap-14">
       <div className="flex flex-col">
         <h1 className="text-center font-bold text-slate-900 text-4xl">

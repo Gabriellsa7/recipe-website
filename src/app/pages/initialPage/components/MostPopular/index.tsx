@@ -38,10 +38,10 @@ export default function MostPopular() {
               />
             </Top>
             <Bottom className="flex flex-col gap-5 items-start mx-6 my-4 pb-4">
-              <h1 className="text-2xl font-bold text-slate-800">
+              <h1 className="text-2xl font-bold text-slate-800 min-[320px]:text-lg min-[768px]:text-xl min-[1440px]:text-2xl">
                 {recipes.name}
               </h1>
-              <p className="font-medium text-lg text-slate-900">
+              <p className="font-medium text-lg text-slate-900 min-[320px]:text-sm min-[768px]:text-lg">
                 {recipes.description}
               </p>
               <div className="flex gap-20 w-full items-center">

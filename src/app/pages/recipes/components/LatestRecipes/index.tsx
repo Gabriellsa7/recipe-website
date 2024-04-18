@@ -10,7 +10,7 @@ export default function LatestRecipes() {
       <h1 className="text-center font-bold text-slate-900 text-4xl">
         Latest Recipes
       </h1>
-      <div className="grid grid-cols-4 justify-center items-center gap-10 m-20">
+      <div className="grid grid-cols-4 justify-center items-center gap-10 m-20 min-[320px]:grid-cols-1 min-[768px]:grid min-[768px]:grid-cols-2 min-[1024px]:grid-cols-3 min-[1440px]:grid-cols-4">
         {latestRecipes.map((latestRecipes) => (
           <Link
             key={latestRecipes.id}
@@ -29,13 +29,13 @@ export default function LatestRecipes() {
                   />
                 </Top>
                 <Bottom className="h-max-[212px] flex flex-col gap-5 items-start mx-6 my-4 pb-4 ">
-                  <h1 className="text-2xl font-bold text-slate-800">
+                  <h1 className="text-2xl font-bold text-slate-800 min-[320px]:text-lg min-[768px]:text-xl min-[1440px]:text-2xl">
                     {latestRecipes.name}
                   </h1>
-                  <p className="font-medium text-lg text-slate-900 line-clamp-3">
+                  <p className="font-medium text-lg text-slate-900 line-clamp-3 min-[320px]:text-sm min-[768px]:text-lg">
                     {latestRecipes.description}
                   </p>
-                  <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500">
+                  <button className="bg-yellow-400 text-slate-900 px-6 py-1.5 rounded-full font-bold text-lg hover:bg-yellow-300 duration-500 min-[320px]:text-sm min-[768px]:text-lg">
                     See Recipe
                   </button>
                 </Bottom>

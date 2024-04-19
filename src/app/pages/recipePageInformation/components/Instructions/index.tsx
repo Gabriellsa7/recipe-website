@@ -32,7 +32,9 @@ export default function Instructions() {
   }
   return (
     <div>
-      <h1 className="font-bold text-2xl">Instructions</h1>
+      <h1 className="font-bold text-2xl min-[320px]:text-lg min-[1024px]:text-2xl">
+        Instructions
+      </h1>
       <div>
         <ul className="list-decimal ml-8 my-2 flex flex-col gap-2">
           {recipe.instructions &&

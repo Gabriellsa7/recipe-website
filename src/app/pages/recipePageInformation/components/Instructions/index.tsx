@@ -38,7 +38,7 @@ export default function Instructions() {
           {recipe.instructions &&
             recipe.instructions.map((instruction, i) => (
               <li key={i}>
-                <p className="text-lg w-[1000px] break-words font-medium">
+                <p className="text-lg w-[1000px] break-words font-medium min-[320px]:text-sm min-[320px]:w-[200px] min-[320px]:break-words min-[768px]:text-base min-[768px]:w-[300px] min-[768px]:break-words min-[1024px]:text-lg min-[1024px]:w-[600px] min-[1024px]:break-words min-[1440px]:w-[1000px]">
                   {instruction}
                 </p>
               </li>

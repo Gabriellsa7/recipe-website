@@ -65,7 +65,7 @@ export default function InformationRecipe() {
           </div>
         </div>
       </div>
-      <div className="mx-12 flex flex-1 justify-around my-11">
+      <div className="mx-12 flex flex-1 justify-around my-11 min-[320px]:flex-col min-[768px]:flex-row min-[1440px]:flex-row min-[1440px]:gap-4">
         {/* <PreparationMode /> */}
         <Instructions />
         <Ingredients />

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
+    //make a burger menu for mobile
     <main className={`flex w-screen flex-col  mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen "></div>
       <div className={`flex w-screen items-center mt-4 justify-around py-6`}>

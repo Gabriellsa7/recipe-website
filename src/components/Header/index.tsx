@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { BsCupHot } from "react-icons/bs";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +11,7 @@ export default function Header() {
   };
 
   return (
+    //Styling the burger menu
     <main className={`flex flex-col mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen"></div>
       {/* <div className={`flex gap-5 items-center`}>

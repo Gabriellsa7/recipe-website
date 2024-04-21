@@ -11,6 +11,7 @@ export default function Header() {
   };
 
   return (
+    //Add functionality to search input
     //Styling the burger menu
     <main className={`flex flex-col mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen"></div>

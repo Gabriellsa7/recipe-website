@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import { BsCupHot } from "react-icons/bs";
+import recipes from "@/app/pages/initialPage/components/MostPopular/mocks";
+import { Bottom, Container, Top } from "../Card";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,19 +98,46 @@ export default function Header() {
             isMenuOpen ? "block" : "hidden"
           } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12`}
         > */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center flex-col">
           <div className="px-2 relative">
             <CiSearch
               size="20px"
               color="gray"
-              className="absolute top-1/2 left-5 transform -translate-y-1/2 text-gray-400"
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400"
+            />
+            <input
+              type="text"
+              placeholder="Search Recipe"
+              className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
             />
           </div>
-          <input
-            type="text"
-            placeholder="Search Recipe"
-            className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
-          />
+          <div className="absolute top-[5.9rem] w-[245px] h-auto bg-slate-200 rounded-xl z-10">
+            <div className="flex flex-col gap-4 px-2 py-2">
+              {recipes &&
+                recipes.map((recipes) => (
+                  <Link
+                    key={recipes.id}
+                    href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
+                  >
+                    <Container
+                      key={recipes.id}
+                      className="flex gap-4 items-center duration-500 hover:scale-105 cursor-pointer border-2 border-slate-300"
+                    >
+                      <Top>
+                        <Image
+                          className="w-20 rounded-lg"
+                          src={recipes.img}
+                          alt="image of recipe"
+                        />
+                      </Top>
+                      <Bottom className="">
+                        <h1 className="">{recipes.name}</h1>
+                      </Bottom>
+                    </Container>
+                  </Link>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
       {/* </div> */}

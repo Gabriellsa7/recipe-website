@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
+import { BsCupHot } from "react-icons/bs";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,13 +16,17 @@ export default function Header() {
     //Styling the burger menu
     <main className={`flex flex-col mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen"></div>
-      {/* <div className={`flex gap-5 items-center`}>
+      <div className={`flex items-center justify-between mt-2 pb-6`}>
+        <div
+          className={` ${
+            isMenuOpen ? "hidden" : "block"
+          } flex gap-4 items-center min-[768px]:hidden`}
+        >
           <BsCupHot size={26} />
-          <h1 className="font-semibold text-2xl text-gray-700">
+          <h1 className="font-semibold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-xl min-[1024]:text-2xl min-[1440]:text-4xl">
             Recipes Boruto
           </h1>
-        </div> */}
-      <div className={`flex items-center justify-between mt-2 pb-6`}>
+        </div>
         <div className="flex items-center min-[768px]:hidden">
           <button
             onClick={toggleMenu}
@@ -58,35 +63,39 @@ export default function Header() {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12`}
+        } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
       >
-        <div className="flex items-center">
-          <Link href="/">
-            <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-              Home
-            </h2>
-          </Link>
+        <div
+          className={`flex gap-4 items-center min-[320px]:hidden min-[768px]:flex`}
+        >
+          <BsCupHot size={26} />
+          <h1 className="font-semibold text-2xl text-gray-700 ">
+            Recipes Boruto
+          </h1>
         </div>
-        <div className="flex items-center">
-          <Link href="/pages/recipes">
-            <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-              Recipes
-            </h2>
-          </Link>
-        </div>
-        <div className="flex items-center">
-          <Link href="/pages/myRecipes">
-            <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-              My Recipes
-            </h2>
-          </Link>
+        <div className="flex items-center justify-around gap-12  min-[320px]:pb-4 min-[320px]:flex-row min-[320px]:gap-4 min-[768px]:gap-12 min-[768px]:pb-0">
+          <div className="flex items-center justify-center">
+            <Link href="/">
+              <h2 className="font-bold text-xl text-gray-700">Home</h2>
+            </Link>
+          </div>
+          <div className="flex items-center justify-center">
+            <Link href="/pages/recipes">
+              <h2 className="font-bold text-xl text-gray-700">Recipes</h2>
+            </Link>
+          </div>
+          <div className="flex items-center justify-center">
+            <Link href="/pages/myRecipes">
+              <h2 className="font-bold text-xl text-gray-700">My Recipes</h2>
+            </Link>
+          </div>
         </div>
         {/* <div
           className={`${
             isMenuOpen ? "block" : "hidden"
           } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12`}
         > */}
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           <div className="px-2 relative">
             <CiSearch
               size="20px"

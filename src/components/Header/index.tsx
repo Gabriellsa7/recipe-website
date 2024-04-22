@@ -111,7 +111,7 @@ export default function Header() {
               className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
             />
           </div>
-          <div className="absolute top-[5.9rem] w-[245px] h-auto bg-slate-200 rounded-xl z-10">
+          <div className="absolute top-[5.9rem] w-[245px] h-auto bg-slate-200 rounded-xl z-10 hidden">
             <div className="flex flex-col gap-4 px-2 py-2">
               {recipes &&
                 recipes.map((recipes) => (

@@ -1,36 +1,51 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import { BsCupHot } from "react-icons/bs";
 import recipes from "@/app/pages/initialPage/components/MostPopular/mocks";
 import { Bottom, Container, Top } from "../Card";
 import Image from "next/image";
+import recentRecipes from "@/app/pages/initialPage/components/RecentRecipe/mocks";
+import allRecipes from "@/app/pages/recipes/components/AllRecipes/mocks";
+import latestRecipes from "@/app/pages/recipes/components/LatestRecipes/mocks";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearch(query);
+  };
+
+  const generalRecipes = recipes
+    .concat(recentRecipes)
+    .concat(allRecipes)
+    .concat(latestRecipes);
+
+  const filteredRecipes =
+    search != ""
+      ? generalRecipes.filter((name) =>
+          name.name.toLowerCase().includes(search.toLowerCase())
+        )
+      : generalRecipes;
+
   return (
     //Add functionality to search input
     //Stylized burger menu subject to modifications
     <main className={`flex flex-col mb-4 overflow-hidden`}>
-      <div className="bg-yellow-400 p-2.5 w-screen"></div>
-      <div className={`flex items-center justify-between mt-2 pb-6`}>
+      <div className="bg-yellow-400 p-2.5 w-screen mb-4"></div>
+      {/* <div className={`flex items-center justify-between mt-2 pb-6`}>
         <div
-          className={` ${
-            isMenuOpen ? "hidden" : "block"
-          } flex gap-4 items-center min-[768px]:hidden`}
+          className={`flex items-center ${
+            isMenuOpen ? "block" : "hidden"
+          } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
         >
-          <BsCupHot size={26} />
-          <h1 className="font-semibold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-xl min-[1024]:text-2xl min-[1440]:text-4xl">
-            Recipes Boruto
-          </h1>
-        </div>
-        <div className="flex items-center min-[768px]:hidden">
           <button
             onClick={toggleMenu}
             className="block text-gray-700 hover:text-gray-900 focus:text-gray-900 focus:outline-none"
@@ -61,22 +76,13 @@ export default function Header() {
               </svg>
             )}
           </button>
-        </div>
-      </div>
+        </div> 
+      </div>*/}
       <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
+        //${isMenuOpen ? "block" : "hidden"}
+        className={`flex justify-around min-[320px]:flex-col min-[768px]:flex-row min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
       >
-        <div
-          className={`flex gap-4 items-center min-[320px]:hidden min-[768px]:flex`}
-        >
-          <BsCupHot size={26} />
-          <h1 className="font-semibold text-2xl text-gray-700 ">
-            Recipes Boruto
-          </h1>
-        </div>
-        <div className="flex items-center justify-around gap-12  min-[320px]:pb-4 min-[320px]:flex-row min-[320px]:gap-4 min-[768px]:gap-12 min-[768px]:pb-0">
+        <div className="flex items-center justify-around gap-12 min-[320px]:pb-4 min-[320px]:flex-row min-[320px]:gap-4 min-[768px]:flex min-[768px]:gap-12 min-[768px]:pb-0">
           <div className="flex items-center justify-center">
             <Link href="/">
               <h2 className="font-bold text-xl text-gray-700">Home</h2>
@@ -93,11 +99,6 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        {/* <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12`}
-        > */}
         <div className="flex items-center justify-center flex-col">
           <div className="px-2 relative">
             <CiSearch
@@ -109,12 +110,13 @@ export default function Header() {
               type="text"
               placeholder="Search Recipe"
               className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
+              onChange={handleSearchInput}
             />
           </div>
-          <div className="absolute top-[5.9rem] w-[245px] h-auto bg-slate-200 rounded-xl z-10 hidden">
+          {/* <div className="absolute top-[94.4px] w-[245px] h-auto bg-slate-200 rounded-xl z-10">
             <div className="flex flex-col gap-4 px-2 py-2">
-              {recipes &&
-                recipes.map((recipes) => (
+              {filteredRecipes &&
+                filteredRecipes.map((recipes) => (
                   <Link
                     key={recipes.id}
                     href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
@@ -137,10 +139,9 @@ export default function Header() {
                   </Link>
                 ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      {/* </div> */}
     </main>
   );
 }

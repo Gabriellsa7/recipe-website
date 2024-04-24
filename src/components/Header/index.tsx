@@ -31,9 +31,9 @@ export default function Header() {
   const filteredRecipes =
     search != ""
       ? generalRecipes.filter((name) =>
-          name.name.toLowerCase().includes(search.toLowerCase())
+          name.name.toLowerCase().includes(search.toLowerCase()).valueOf()
         )
-      : generalRecipes;
+      : "";
 
   return (
     <main className={`flex flex-col mb-4 overflow-hidden`}>
@@ -130,34 +130,38 @@ export default function Header() {
                 onChange={handleSearchInput}
               />
             </div>
-          </div>
-          {/* <div className="absolute top-[94.4px] w-[245px] h-auto bg-slate-200 rounded-xl z-10">
-            <div className="flex flex-col gap-4 px-2 py-2">
-              {filteredRecipes &&
-                filteredRecipes.map((recipes) => (
-                  <Link
-                    key={recipes.id}
-                    href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
-                  >
-                    <Container
+            <div
+              className={` ${
+                search === "" ? "hidden" : "block"
+              } absolute top-[80px] w-[245px] h-auto bg-slate-200 rounded-xl z-10 min-[320px]:top-[210px] min-[768px]:top-[120px] min-[1024px]:top-[80px]`}
+            >
+              <div className="flex flex-col gap-4 px-2 py-2">
+                {filteredRecipes &&
+                  filteredRecipes.map((recipes) => (
+                    <Link
                       key={recipes.id}
-                      className="flex gap-4 items-center duration-500 hover:scale-105 cursor-pointer border-2 border-slate-300"
+                      href={`/pages/recipePageInformation?name=${recipes.name}&description=${recipes.description}&img=${recipes.img}`}
                     >
-                      <Top>
-                        <Image
-                          className="w-20 rounded-lg"
-                          src={recipes.img}
-                          alt="image of recipe"
-                        />
-                      </Top>
-                      <Bottom className="">
-                        <h1 className="">{recipes.name}</h1>
-                      </Bottom>
-                    </Container>
-                  </Link>
-                ))}
+                      <Container
+                        key={recipes.id}
+                        className="flex gap-4 items-center duration-500 hover:scale-105 cursor-pointer border-2 border-slate-300"
+                      >
+                        <Top>
+                          <Image
+                            className="w-20 rounded-lg"
+                            src={recipes.img}
+                            alt="image of recipe"
+                          />
+                        </Top>
+                        <Bottom className="">
+                          <h1 className="">{recipes.name}</h1>
+                        </Bottom>
+                      </Container>
+                    </Link>
+                  ))}
+              </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </main>

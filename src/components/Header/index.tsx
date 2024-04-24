@@ -37,12 +37,12 @@ export default function Header() {
 
   return (
     <main className={`flex flex-col mb-4 overflow-hidden`}>
-      <div className="bg-yellow-400 p-2.5 w-screen mb-2"></div>
-      <div className={`flex items-center justify-between pb-6`}>
+      <div className="bg-yellow-400 p-2.5 w-screen mb-4"></div>
+      <div className={`flex items-center justify-between`}>
         <div
           className={`flex items-center ${
             isMenuOpen ? "hidden" : "block"
-          } min-[768px]:hidden gap-12 pb-4`}
+          } min-[768px]:block min-[1024px]:hidden gap-12 pb-4`}
         >
           <button
             onClick={toggleMenu}
@@ -80,29 +80,41 @@ export default function Header() {
         //${isMenuOpen ? "block" : "hidden"}
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
+        } min-[1024px]:flex min-[1024px]:items-center min-[1024px]:justify-center gap-12 pb-2`}
       >
-        <div className="flex items-center justify-around gap-12 min-[320px]:pb-4 min-[320px]:flex-col min-[320px]:gap-4 min-[768px]:flex-row min-[768px]:gap-12 min-[768px]:pb-0">
-          <div className="flex items-center justify-center">
-            <Link href="/">
-              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-                Home
-              </h2>
-            </Link>
+        <div className="flex w-screen items-center justify-around gap-12 min-[320px]:pb-4 min-[320px]:flex-col min-[320px]:gap-4 min-[768px]:flex-row min-[768px]:gap-12 min-[768px]:pb-0">
+          <div
+            className={` ${
+              !isMenuOpen ? "block" : "hidden"
+            } flex gap-5 items-center min-[1024px]:flex`}
+          >
+            <BsCupHot size={26} />
+            <h1 className="font-semibold text-2xl text-gray-700 min-[768px]:text-xl">
+              Recipes Boruto
+            </h1>
           </div>
-          <div className="flex items-center justify-center">
-            <Link href="/pages/recipes">
-              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-                Recipes
-              </h2>
-            </Link>
-          </div>
-          <div className="flex items-center justify-center">
-            <Link href="/pages/myRecipes">
-              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
-                My Recipes
-              </h2>
-            </Link>
+          <div className="flex items-center gap-10 min-[320px]:flex-col min-[320px]:gap-4 min-[768px]:flex-row min-[768px]:gap-10">
+            <div className="flex items-center justify-center">
+              <Link href="/">
+                <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-xl">
+                  Home
+                </h2>
+              </Link>
+            </div>
+            <div className="flex items-center justify-center">
+              <Link href="/pages/recipes">
+                <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-xl">
+                  Recipes
+                </h2>
+              </Link>
+            </div>
+            <div className="flex items-center justify-center">
+              <Link href="/pages/myRecipes">
+                <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-xl">
+                  My Recipes
+                </h2>
+              </Link>
+            </div>
           </div>
           <div className="flex items-center justify-center flex-col">
             <div className="px-2 relative">

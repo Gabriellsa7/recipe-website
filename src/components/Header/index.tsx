@@ -36,15 +36,13 @@ export default function Header() {
       : generalRecipes;
 
   return (
-    //Add functionality to search input
-    //Stylized burger menu subject to modifications
     <main className={`flex flex-col mb-4 overflow-hidden`}>
-      <div className="bg-yellow-400 p-2.5 w-screen mb-4"></div>
-      <div className={`flex items-center justify-between mt-2 pb-6`}>
-        {/* <div
+      <div className="bg-yellow-400 p-2.5 w-screen mb-2"></div>
+      <div className={`flex items-center justify-between pb-6`}>
+        <div
           className={`flex items-center ${
             isMenuOpen ? "hidden" : "block"
-          } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
+          } min-[768px]:hidden gap-12 pb-4`}
         >
           <button
             onClick={toggleMenu}
@@ -76,42 +74,50 @@ export default function Header() {
               </svg>
             )}
           </button>
-        </div> */}
+        </div>
       </div>
       <div
         //${isMenuOpen ? "block" : "hidden"}
-        className={`flex justify-around min-[320px]:flex-col min-[768px]:flex-row min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
       >
-        <div className="flex items-center justify-around gap-12 min-[320px]:pb-4 min-[320px]:flex-row min-[320px]:gap-4 min-[768px]:flex min-[768px]:gap-12 min-[768px]:pb-0">
+        <div className="flex items-center justify-around gap-12 min-[320px]:pb-4 min-[320px]:flex-col min-[320px]:gap-4 min-[768px]:flex-row min-[768px]:gap-12 min-[768px]:pb-0">
           <div className="flex items-center justify-center">
             <Link href="/">
-              <h2 className="font-bold text-xl text-gray-700">Home</h2>
+              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
+                Home
+              </h2>
             </Link>
           </div>
           <div className="flex items-center justify-center">
             <Link href="/pages/recipes">
-              <h2 className="font-bold text-xl text-gray-700">Recipes</h2>
+              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
+                Recipes
+              </h2>
             </Link>
           </div>
           <div className="flex items-center justify-center">
             <Link href="/pages/myRecipes">
-              <h2 className="font-bold text-xl text-gray-700">My Recipes</h2>
+              <h2 className="font-bold text-2xl text-gray-700 min-[320px]:text-lg min-[768px]:text-2xl">
+                My Recipes
+              </h2>
             </Link>
           </div>
-        </div>
-        <div className="flex items-center justify-center flex-col">
-          <div className="px-2 relative">
-            <CiSearch
-              size="20px"
-              color="gray"
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400"
-            />
-            <input
-              type="text"
-              placeholder="Search Recipe"
-              className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
-              onChange={handleSearchInput}
-            />
+          <div className="flex items-center justify-center flex-col">
+            <div className="px-2 relative">
+              <CiSearch
+                size="20px"
+                color="gray"
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400"
+              />
+              <input
+                type="text"
+                placeholder="Search Recipe"
+                className="rounded-xl px-8 py-2 border-none focus:outline-none bg-slate-200"
+                onChange={handleSearchInput}
+              />
+            </div>
           </div>
           {/* <div className="absolute top-[94.4px] w-[245px] h-auto bg-slate-200 rounded-xl z-10">
             <div className="flex flex-col gap-4 px-2 py-2">

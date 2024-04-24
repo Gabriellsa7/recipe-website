@@ -40,10 +40,10 @@ export default function Header() {
     //Stylized burger menu subject to modifications
     <main className={`flex flex-col mb-4 overflow-hidden`}>
       <div className="bg-yellow-400 p-2.5 w-screen mb-4"></div>
-      {/* <div className={`flex items-center justify-between mt-2 pb-6`}>
-        <div
+      <div className={`flex items-center justify-between mt-2 pb-6`}>
+        {/* <div
           className={`flex items-center ${
-            isMenuOpen ? "block" : "hidden"
+            isMenuOpen ? "hidden" : "block"
           } min-[768px]:flex min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}
         >
           <button
@@ -76,8 +76,8 @@ export default function Header() {
               </svg>
             )}
           </button>
-        </div> 
-      </div>*/}
+        </div> */}
+      </div>
       <div
         //${isMenuOpen ? "block" : "hidden"}
         className={`flex justify-around min-[320px]:flex-col min-[768px]:flex-row min-[768px]:items-center min-[768px]:justify-center gap-12 pb-4`}

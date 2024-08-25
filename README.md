@@ -1,3 +1,33 @@
+# Recipe Website
+
+## Description
+
+This is a recipe website where users can search for recipes, view detailed recipe instructions, and add their favorite recipes to a personalized list. The website is designed to provide a seamless user experience with a modern and responsive interface.
+
+## Features
+
+- **Search Recipes:** Users can search for recipes based on keywords, ingredients, or cuisine.
+- **View Recipe Details:** Users can view detailed instructions, ingredients, and cooking methods for each recipe.
+- **Favorite Recipes:** Users can add recipes to their favorites list for easy access later.
+
+## Technologies Used
+
+- **Next.js:** A React framework for server-side rendering and static site generation.
+- **TypeScript:** A strongly typed programming language that builds on JavaScript.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+
+## Setup
+
+### Prerequisites
+
+- Node.js and npm/yarn installed
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Gabriellsa7/recipe-website.git
+
 - This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

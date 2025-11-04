@@ -23,17 +23,20 @@ export default function Header() {
     setSearch(query);
   };
 
-  const generalRecipes = recipes
-    .concat(recentRecipes)
-    .concat(allRecipes)
-    .concat(latestRecipes);
+  // Merge
+  const generalRecipes = [...allRecipes];
 
+  // Dedupe by id (fallback to name if id missing)
+  const uniqueRecipes = Array.from(
+    new Map(generalRecipes.map((r) => [r.id ?? r.name, r])).values()
+  );
+
+  // Filter
+  const q = search.trim().toLowerCase();
   const filteredRecipes =
-    search != ""
-      ? generalRecipes.filter((name) =>
-          name.name.toLowerCase().includes(search.toLowerCase()).valueOf()
-        )
-      : "";
+    q !== ""
+      ? uniqueRecipes.filter((r) => r.name.toLowerCase().includes(q))
+      : [];
 
   return (
     <main className={`flex flex-col mb-4 overflow-hidden`}>

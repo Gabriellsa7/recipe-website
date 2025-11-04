@@ -3,12 +3,9 @@ import React, { ChangeEvent, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import { BsCupHot } from "react-icons/bs";
-import recipes from "@/app/pages/initialPage/components/MostPopular/mocks";
 import { Bottom, Container, Top } from "../Card";
 import Image from "next/image";
-import recentRecipes from "@/app/pages/initialPage/components/RecentRecipe/mocks";
 import allRecipes from "@/app/pages/recipes/components/AllRecipes/mocks";
-import latestRecipes from "@/app/pages/recipes/components/LatestRecipes/mocks";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
